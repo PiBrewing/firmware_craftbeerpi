@@ -55,6 +55,10 @@ jobs:
           make -s all
         working-directory: 'buildroot'
 
+      - name: List output directory
+        run: |
+          ls buildroot/output/images
+
       - name: upload sdcard image
         uses: actions/upload-artifact@v2
         with:
