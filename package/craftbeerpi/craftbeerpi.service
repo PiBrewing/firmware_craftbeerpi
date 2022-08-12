@@ -1,0 +1,15 @@
+[Unit]
+Description=CraftBeer Pi
+Documentation=https://github.com/craftbeerpi/craftbeerpi4
+After=network.target
+
+[Service]
+Restart=always
+User=craftbeerpi
+DynamicUser=yes
+ExecStart=/usr/local/bin/cbpi start
+WorkingDirectory=/srv/craftbeerpi
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+
+[Install]
+WantedBy=multi-user.target

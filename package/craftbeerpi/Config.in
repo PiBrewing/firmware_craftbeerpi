@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CRAFTBEERPI
+	bool "craftbeerpi"
+	select BR2_PACKAGE_PYTHON3
+	help
+	  An open source brewery automation system
