@@ -62,6 +62,6 @@ jobs:
       - name: upload sdcard image
         uses: actions/upload-artifact@v3
         with:
-          name: 'sdcard'
+          name: '${{ matrix.config }}-sdcard.img'
           path: buildroot/output/images/sdcard.img
           if-no-files-found: error
