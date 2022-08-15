@@ -1,5 +1,5 @@
 config BR2_PACKAGE_CRAFTBEERPI_PT100X
-	bool "craftbeerpi_pt100x"
-	depends on BR2_PACKAGE_CRAFTBEERPI
-	help
-	  CraftBeerPi Plugin: PT100/PT1000 Temp Sensor
+    bool "craftbeerpi_pt100x"
+    depends on BR2_PACKAGE_CRAFTBEERPI
+    help
+    CraftBeerPi Plugin: PT100/PT1000 Temp Sensor

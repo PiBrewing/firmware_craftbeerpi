@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CRAFTBEERPI_BUZZER
+    bool "craftbeerpi_buzzer"
+    depends on BR2_PACKAGE_CRAFTBEERPI
+    help
+    CraftBeerPi Plugin: Activates buzzer on cbpi4 messages

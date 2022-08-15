@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CRAFTBEERPI_FERMENTERSTEP
+    bool "craftbeerpi_fermenterstep"
+    depends on BR2_PACKAGE_CRAFTBEERPI
+    help
+    CraftBeerPi Plugin: Plugin for Additional Fermentersteps

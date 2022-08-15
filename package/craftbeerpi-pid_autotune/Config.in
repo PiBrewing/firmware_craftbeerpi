@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CRAFTBEERPI_PID_AUTOTUNE
+    bool "craftbeerpi_pid_autotune"
+    depends on BR2_PACKAGE_CRAFTBEERPI
+    help
+    CraftBeerPi Plugin: Kettle controller that can be used to determine the PID parameters for the PID based Kettle controllers

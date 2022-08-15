@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CRAFTBEERPI_SYSTEM
+    bool "craftbeerpi_system"
+    depends on BR2_PACKAGE_CRAFTBEERPI
+    help
+    CraftBeerPi Plugin: System Sensors: Temp, CPU load, Memory

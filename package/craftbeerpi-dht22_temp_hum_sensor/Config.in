@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CRAFTBEERPI_DHT22_TEMP_HUM_SENSOR
+    bool "craftbeerpi_dht22_temp_hum_sensor"
+    depends on BR2_PACKAGE_CRAFTBEERPI
+    help
+    CraftBeerPi Plugin: Sensor for Reltive humidity and temperature

@@ -1,0 +1,7 @@
+CRAFTBEERPI_PUSH_OVER_VERSION = Forwards cbpi4 messages to Pushover push message service
+CRAFTBEERPI_PUSH_OVER_SITE = $(call github,avollkopf,cbpi4-PushOver,$(CRAFTBEERPI_PUSH_OVER_VERSION))
+CRAFTBEERPI_PUSH_OVER_LICENSE = GPL-3
+CRAFTBEERPI_PUSH_OVER_LICENSE_FILES = LICENSE
+CRAFTBEERPI_PUSH_OVER_SETUP_TYPE = setuptools
+
+$(eval $(python-package))

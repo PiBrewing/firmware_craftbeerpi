@@ -1,0 +1,7 @@
+CRAFTBEERPI_PID_BOIL_VERSION = Kettle controller with PID logic and Boil power parameter
+CRAFTBEERPI_PID_BOIL_SITE = $(call github,avollkopf,cbpi4-PIDBoil,$(CRAFTBEERPI_PID_BOIL_VERSION))
+CRAFTBEERPI_PID_BOIL_LICENSE = GPL-3
+CRAFTBEERPI_PID_BOIL_LICENSE_FILES = LICENSE
+CRAFTBEERPI_PID_BOIL_SETUP_TYPE = setuptools
+
+$(eval $(python-package))

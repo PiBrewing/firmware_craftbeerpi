@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CRAFTBEERPI_UI
+    bool "craftbeerpi_ui"
+    depends on BR2_PACKAGE_CRAFTBEERPI
+    help
+    CraftBeerPi Plugin: Web UI

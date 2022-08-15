@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CRAFTBEERPI_NEXTION_DISPLAY
+    bool "craftbeerpi_nextion_display"
+    depends on BR2_PACKAGE_CRAFTBEERPI
+    help
+    CraftBeerPi Plugin: Use Nextion Display on CraftbeerPi4

@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CRAFTBEERPI_TRIAC_HAT_ACTOR
+    bool "craftbeerpi_triac_hat_actor"
+    depends on BR2_PACKAGE_CRAFTBEERPI
+    help
+    CraftBeerPi Plugin: Plugin for using Waveshare's 2CH Triac Hat for controlling actors in CraftBeerPi

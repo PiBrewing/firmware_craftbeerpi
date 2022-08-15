@@ -1,0 +1,7 @@
+CRAFTBEERPI_TRIAC_HAT_ACTOR_VERSION = Plugin for using Waveshare's 2CH Triac Hat for controlling actors in CraftBeerPi
+CRAFTBEERPI_TRIAC_HAT_ACTOR_SITE = $(call github,netanelklein,cbpi4-TriacHatActor,$(CRAFTBEERPI_TRIAC_HAT_ACTOR_VERSION))
+CRAFTBEERPI_TRIAC_HAT_ACTOR_LICENSE = GPL-3
+CRAFTBEERPI_TRIAC_HAT_ACTOR_LICENSE_FILES = LICENSE
+CRAFTBEERPI_TRIAC_HAT_ACTOR_SETUP_TYPE = setuptools
+
+$(eval $(python-package))

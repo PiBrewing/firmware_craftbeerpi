@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CRAFTBEERPI_HX711_LOADCELL
+    bool "craftbeerpi_hx711_loadcell"
+    depends on BR2_PACKAGE_CRAFTBEERPI
+    help
+    CraftBeerPi Plugin: hx711 based Loadcell Sensor

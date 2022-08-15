@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CRAFTBEERPI_TELEGRAM
+    bool "craftbeerpi_telegram"
+    depends on BR2_PACKAGE_CRAFTBEERPI
+    help
+    CraftBeerPi Plugin: Telegram Push Notifications for Craftbeerpi 4

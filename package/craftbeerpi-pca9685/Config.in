@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CRAFTBEERPI_PCA9685
+    bool "craftbeerpi_pca9685"
+    depends on BR2_PACKAGE_CRAFTBEERPI
+    help
+    CraftBeerPi Plugin: PCA9685 I2C PWM Actor Plugin for CraftBeerPi4

@@ -1,0 +1,7 @@
+CRAFTBEERPI_LCDISPLAY2_VERSION = Modded Fork that allows also Display of Fermentation with Fermenter Hysteresis Plugin
+CRAFTBEERPI_LCDISPLAY2_SITE = $(call github,avollkopf,cbpi4-LCDisplay,$(CRAFTBEERPI_LCDISPLAY2_VERSION))
+CRAFTBEERPI_LCDISPLAY2_LICENSE = GPL-3
+CRAFTBEERPI_LCDISPLAY2_LICENSE_FILES = LICENSE
+CRAFTBEERPI_LCDISPLAY2_SETUP_TYPE = setuptools
+
+$(eval $(python-package))
