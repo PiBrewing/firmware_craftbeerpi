@@ -4,7 +4,7 @@ function create_plugin() {
 
     PLUGIN_NAME=$1
     PLUGIN_URL=$2
-    PLUGIN_VERSION=$4
+    PLUGIN_VERSION=$3
     PLUGIN_DESCRIPTION=$4
 
     PLUGIN_NAME=${PLUGIN_NAME//-/_}
