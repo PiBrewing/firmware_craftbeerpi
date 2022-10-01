@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/pyfiglet/json
+md5  2e1d6f0668e9cb1ffacee307ca4b778a  pyfiglet-0.8.post1.tar.gz
+sha256  c6c2321755d09267b438ec7b936825a4910fec696292139e664ca8670e103639  pyfiglet-0.8.post1.tar.gz
+# Locally computed sha256 checksums
+sha256  f38156bc6734858a1263372de28890460f23f1c6d1c0563e79867df182824a9d  LICENSE

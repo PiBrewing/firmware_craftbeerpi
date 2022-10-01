@@ -1,0 +1,6 @@
+config BR2_PACKAGE_PYTHON_PYFIGLET
+	bool "python-pyfiglet"
+	help
+	  Pure-python FIGlet implementation.
+
+	  https://github.com/pwaller/pyfiglet
