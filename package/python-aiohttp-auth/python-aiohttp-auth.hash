@@ -1,0 +1,3 @@
+# md5, sha256 from https://pypi.org/pypi/aiohttp-auth/json
+md5  ba0348f635353e8bcc97136c341c6b17  aiohttp_auth-0.1.1.tar.gz
+sha256  6b2ed2ad6f44819ad9ec3b692dad0489f8f8c59860207d09c639315d06d2e32d  aiohttp_auth-0.1.1.tar.gz

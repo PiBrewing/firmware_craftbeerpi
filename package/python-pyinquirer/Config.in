@@ -1,0 +1,10 @@
+config BR2_PACKAGE_PYTHON_PYINQUIRER
+	bool "python-pyinquirer"
+	select BR2_PACKAGE_PYTHON_PROMPT_TOOLKIT # runtime
+	select BR2_PACKAGE_PYTHON_PYGMENTS # runtime
+	select BR2_PACKAGE_PYTHON_REGEX # runtime
+	help
+	  A Python module for collection of common interactive
+	  command line user interfaces, based on Inquirer.js.
+
+	  https://github.com/CITGuru/PyInquirer/

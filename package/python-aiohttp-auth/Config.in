@@ -1,0 +1,9 @@
+config BR2_PACKAGE_PYTHON_AIOHTTP_AUTH
+	bool "python-aiohttp-auth"
+	select BR2_PACKAGE_PYTHON_AIOHTTP # runtime
+	select BR2_PACKAGE_PYTHON_TICKET_AUTH # runtime
+	help
+	  Authorization and authentication middleware plugin for
+	  aiohttp.
+
+	  https://github.com/gnarlychicken/aiohttp_auth

@@ -1,0 +1,7 @@
+config BR2_PACKAGE_PYTHON_SHORTUUID
+	bool "python-shortuuid"
+	help
+	  A generator library for concise, unambiguous and URL-safe
+	  UUIDs.
+
+	  https://github.com/skorokithakis/shortuuid/
