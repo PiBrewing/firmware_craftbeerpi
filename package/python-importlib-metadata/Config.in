@@ -1,0 +1,6 @@
+config BR2_PACKAGE_PYTHON_IMPORTLIB_METADATA
+	bool "python-importlib-metadata"
+	help
+	  Read metadata from Python packages
+
+	  https://github.com/python/importlib_metadata

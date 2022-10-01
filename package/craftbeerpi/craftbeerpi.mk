@@ -10,7 +10,7 @@ CRAFTBEERPI_DEPENDENCIES = python-requests python-aiohttp \
 	python-aiohttp-security python-aiohttp-session python-aiohttp-swagger \
 	python-aiojobs python-aiosqlite python-cryptography python-voluptuous \
 	python-pyfiglet python-pandas python-shortuuid python-tabulate python-numpy \
-	python-click python-importlib_metadata python-asyncio-mqtt \
+	python-click python-importlib-metadata python-asyncio-mqtt \
 	python-psutil python-zipp python-pyinquirer python-colorama python-pytest-aiohttp \
 	python-coverage craftbeerpi-ui
 
