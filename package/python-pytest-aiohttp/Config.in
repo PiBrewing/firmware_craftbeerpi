@@ -1,0 +1,6 @@
+config BR2_PACKAGE_PYTHON_PYTEST_AIOHTTP
+	bool "python-pytest-aiohttp"
+	help
+	  Pytest plugin for aiohttp support
+
+	  https://github.com/aio-libs/pytest-aiohttp
