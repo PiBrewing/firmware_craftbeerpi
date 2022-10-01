@@ -1,0 +1,8 @@
+config BR2_PACKAGE_PYTHON_PANDAS
+	bool "python-pandas"
+	select BR2_PACKAGE_PYTHON_CYTHON
+	select BR2_PACKAGE_PYTHON_NUMPY
+	help
+	  Powerful data structures for data analysis, time series, and statistics
+
+	 https://pandas.pydata.org/
