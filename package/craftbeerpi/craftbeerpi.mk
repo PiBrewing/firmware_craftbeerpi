@@ -12,14 +12,14 @@ CRAFTBEERPI_DEPENDENCIES = python-requests python-aiohttp \
 	python-pyfiglet python-pandas python-shortuuid python-tabulate python-numpy \
 	python-click python-importlib-metadata python-asyncio-mqtt \
 	python-psutil python-zipp python-pyinquirer python-colorama python-pytest-aiohttp \
-	python-coverage craftbeerpi-ui
+	python-coverage python-dateutil python-pytz craftbeerpi-ui
 
 define CRAFTBEERPI_INSTALL_INIT_SYSTEMD
 	$(INSTALL) -D -m 644 -t $(TARGET_DIR)/usr/lib/systemd/system $(CRAFTBEERPI_PKGDIR)/craftbeerpi.service
 endef
 
 define CRAFTBEERPI_USERS
-	craftbeerpi 1000 craftbeerpi 1000 * - - -
+	craftbeerpi 1000 craftbeerpi 1000 * /srv/craftbeerpi - -
 endef
 
 $(eval $(python-package))
