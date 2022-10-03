@@ -30,5 +30,6 @@ config BR2_PACKAGE_CRAFTBEERPI
 	select BR2_PACKAGE_CRAFTBEERPI_UI
 	select BR2_PACKAGE_PYTHON_DATEUTIL
 	select BR2_PACKAGE_PYTHON_PYTZ
+	select BR2_PACKAGE_PYTHON_TICKET_AUTH
 	help
 	  An open source brewery automation system

@@ -1,0 +1,7 @@
+config BR2_PACKAGE_PYTHON_TICKET_AUTH
+	bool "python-ticket-auth"
+	help
+	  Ticket authentication system similar to mod_auth_tkt used
+	  by Apache.
+
+	  https://github.com/gnarlychicken/ticket_auth
