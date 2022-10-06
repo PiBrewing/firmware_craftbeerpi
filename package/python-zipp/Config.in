@@ -1,6 +1,6 @@
 config BR2_PACKAGE_PYTHON_ZIPP
 	bool "python-zipp"
 	help
-	  Backport of pathlib-compatible object wrapper for zip files
+	  Backport of pathlib-compatible object wrapper for zip files.
 
 	  https://github.com/jaraco/zipp
