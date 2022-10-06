@@ -324,8 +324,12 @@ class BuildrootPackage():
             with open("pyproject.toml", "r") as f:
                 setup_data = toml.load(f)
                 self.setup_metadata = {}
-                self.setup_metadata['install_requires'] = setup_data['tool']['flit']['metadata']['requires']
                 self.setup_metadata['method'] = 'setuptools'
+                try:
+                    self.setup_metadata['install_requires'] = setup_data['tool']['flit']['metadata']['requires']
+                except KeyError:
+                    # Seems we have no dependencies
+                    pass
         finally:
             os.chdir(current_dir)
             sys.path.remove(self.tmp_extract)
