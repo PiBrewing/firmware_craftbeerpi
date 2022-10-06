@@ -1,5 +1,5 @@
-# md5, sha256 from https://pypi.org/pypi/voluptuous/json
-md5  78d39d2a15e3717ab8d100944da60d11  voluptuous-0.13.1.tar.gz
-sha256  e8d31c20601d6773cb14d4c0f42aee29c6821bbd1018039aac7ac5605b489723  voluptuous-0.13.1.tar.gz
+# md5, sha256 from https://pypi.org/pypi/voluptuous/0.12.2/json
+md5  5475aae13f559334d6725da4bb8e2fb9  voluptuous-0.12.2.tar.gz
+sha256  4db1ac5079db9249820d49c891cb4660a6f8cae350491210abce741fabf56513  voluptuous-0.12.2.tar.gz
 # Locally computed sha256 checksums
 sha256  247b4976b7a7fa4d89d9587caa5095561eb46dc5457f2279f62a62b5452adea9  COPYING

@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/importlib_metadata/4.11.1/json
+md5  be2ceb4727737455cf2d84a85ade1a98  importlib_metadata-4.11.1.tar.gz
+sha256  175f4ee440a0317f6e8d81b7f8d4869f93316170a65ad2b007d2929186c8052c  importlib_metadata-4.11.1.tar.gz
+# Locally computed sha256 checksums
+sha256  c0d7ba740721989d55bd507c0fda1373e8071da742b9a48101ebf7eac60433a5  LICENSE

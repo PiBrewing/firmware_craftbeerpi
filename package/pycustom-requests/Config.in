@@ -1,0 +1,12 @@
+config BR2_PACKAGE_PYCUSTOM_REQUESTS
+	bool "pycustom-requests"
+	select BR2_PACKAGE_PYTHON_CERTIFI # runtime
+	select BR2_PACKAGE_PYTHON_CHARDET # runtime
+	select BR2_PACKAGE_PYTHON_CHARSET_NORMALIZER # runtime
+	select BR2_PACKAGE_PYTHON_IDNA # runtime
+	select BR2_PACKAGE_PYTHON_IDNA # runtime
+	select BR2_PACKAGE_PYTHON_URLLIB3 # runtime
+	help
+	  Python HTTP for Humans.
+
+	  https://requests.readthedocs.io

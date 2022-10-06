@@ -1,0 +1,8 @@
+config BR2_PACKAGE_PYCUSTOM_CLICK
+	bool "pycustom-click"
+	select BR2_PACKAGE_PYTHON_COLORAMA # runtime
+	select BR2_PACKAGE_PYTHON_IMPORTLIB_METADATA # runtime
+	help
+	  Composable command line interface toolkit.
+
+	  https://palletsprojects.com/p/click/

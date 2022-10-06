@@ -1,5 +1,5 @@
-# md5, sha256 from https://pypi.org/pypi/shortuuid/json
-md5  6d3713b6901e3544f97f61a0ca95179d  shortuuid-1.0.9.tar.gz
-sha256  459f12fa1acc34ff213b1371467c0325169645a31ed989e268872339af7563d5  shortuuid-1.0.9.tar.gz
+# md5, sha256 from https://pypi.org/pypi/shortuuid/1.0.8/json
+md5  739d57418161c58359a48461d43c8511  shortuuid-1.0.8.tar.gz
+sha256  9435e87e5a64f3b92f7110c81f989a3b7bdb9358e22d2359829167da476cfc23  shortuuid-1.0.8.tar.gz
 # Locally computed sha256 checksums
 sha256  10b2b061be63a6c74a96e5a2c967425b066c5fb483b7c3880703347fcd2ee0c1  COPYING

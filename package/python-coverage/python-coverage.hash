@@ -1,5 +1,5 @@
-# md5, sha256 from https://pypi.org/pypi/coverage/json
-md5  b82d906e039a72b75470b6932663b2e9  coverage-6.5.0.tar.gz
-sha256  f642e90754ee3e06b0e7e51bce3379590e76b7f76b708e1a71ff043f87025c84  coverage-6.5.0.tar.gz
+# md5, sha256 from https://pypi.org/pypi/coverage/6.3.1/json
+md5  cd19dd77fa41ca23bb144d079374d42e  coverage-6.3.1.tar.gz
+sha256  6c3f6158b02ac403868eea390930ae64e9a9a2a5bbfafefbb920d29258d9f2f8  coverage-6.3.1.tar.gz
 # Locally computed sha256 checksums
 sha256  0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594  LICENSE.txt

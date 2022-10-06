@@ -1,0 +1,7 @@
+config BR2_PACKAGE_PYCUSTOM_CRYPTOGRAPHY
+	bool "pycustom-cryptography"
+	help
+	  cryptography is a package which provides cryptographic
+	  recipes and primitives to Python developers.
+
+	  https://github.com/pyca/cryptography
