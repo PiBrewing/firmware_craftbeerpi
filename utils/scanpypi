@@ -631,8 +631,9 @@ class BuildrootPackage():
                                    subsequent_indent='\t  ')
 
         # make sure a help text is terminated with a full stop
-        if help_lines[-1][-1] != '.':
-            help_lines[-1] += '.'
+        if len(help_lines) > 0:
+            if help_lines[-1][-1] != '.':
+                help_lines[-1] += '.'
 
         home_page = md_info.get('home_page', None) or \
                     md_info.get('project_urls', {}).get('Homepage', None)  # noqa: E127
