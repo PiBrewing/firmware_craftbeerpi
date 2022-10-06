@@ -5,13 +5,13 @@ CRAFTBEERPI_SITE = $(call github,craftbeerpi,craftbeerpi4,$(CRAFTBEERPI_VERSION)
 CRAFTBEERPI_LICENSE = GPL-3
 CRAFTBEERPI_LICENSE_FILES = LICENSE
 CRAFTBEERPI_SETUP_TYPE = setuptools
-CRAFTBEERPI_DEPENDENCIES = python-requests python-aiohttp \
+CRAFTBEERPI_DEPENDENCIES = pycustom-requests python-aiohttp \
 	python-aiohttp-auth python-aiohttp-route-decorator \
 	python-aiohttp-security python-aiohttp-session python-aiohttp-swagger \
-	python-aiojobs python-aiosqlite python-cryptography python-voluptuous \
-	python-pyfiglet python-pandas python-shortuuid python-tabulate python-numpy \
+	pycustom-aiojobs python-aiosqlite pycustom-cryptography python-voluptuous \
+	python-pyfiglet python-pandas python-shortuuid python-tabulate pycustom-numpy \
 	python-click python-importlib-metadata python-asyncio-mqtt \
-	python-psutil python-zipp python-pyinquirer python-colorama python-pytest-aiohttp \
+	pycustom-psutil python-zipp python-pyinquirer python-colorama python-pytest-aiohttp \
 	python-coverage python-dateutil python-pytz python-ticket-auth python-setuptools \
 	craftbeerpi-ui
 

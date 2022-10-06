@@ -1,5 +1,0 @@
-# md5, sha256 from https://pypi.org/pypi/tabulate/0.8.9/json
-md5  71e6f214512ceda2892be47767156754  tabulate-0.8.9.tar.gz
-sha256  eb1d13f25760052e8931f2ef80aaf6045a6cceb47514db8beab24cded16f13a7  tabulate-0.8.9.tar.gz
-# Locally computed sha256 checksums
-sha256  e9b3558903e43517ec2763e29f656495f969e71bca448b2d2ead377f07344fa5  LICENSE

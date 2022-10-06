@@ -1,6 +1,0 @@
-config BR2_PACKAGE_PYCUSTOM_TABULATE
-	bool "pycustom-tabulate"
-	help
-	  Pretty-print tabular data.
-
-	  https://github.com/astanin/python-tabulate
