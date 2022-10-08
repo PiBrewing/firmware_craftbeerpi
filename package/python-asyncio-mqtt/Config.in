@@ -3,6 +3,7 @@ config BR2_PACKAGE_PYTHON_ASYNCIO_MQTT
 	select BR2_PACKAGE_PYTHON_ASYNC_GENERATOR # runtime
 	select BR2_PACKAGE_PYTHON_PAHO_MQTT_CUSTOM # runtime
 	select BR2_PACKAGE_PYCUSTOM_TYPING_EXTENSIONS # runtime
+	select BR2_PACKAGE_PYTHON3_SSL
 	help
 	  Idomatic asyncio wrapper around paho-mqtt.
 
