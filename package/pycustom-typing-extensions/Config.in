@@ -1,0 +1,3 @@
+config BR2_PACKAGE_PYCUSTOM_TYPING_EXTENSIONS
+	bool "pycustom-typing-extensions"
+	help

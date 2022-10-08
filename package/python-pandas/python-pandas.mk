@@ -10,6 +10,6 @@ PYTHON_PANDAS_SITE = https://files.pythonhosted.org/packages/c4/eb/cfa96ba42695b
 PYTHON_PANDAS_SETUP_TYPE = setuptools
 PYTHON_PANDAS_LICENSE = BSD 3-Clause License
 PYTHON_PANDAS_LICENSE_FILES = LICENSE
-PYTHON_PANDAS_DEPENDENCIES = python-numpy host-python-numpy
+PYTHON_PANDAS_DEPENDENCIES = pycustom-numpy host-pycustom-numpy
 
 $(eval $(python-package))

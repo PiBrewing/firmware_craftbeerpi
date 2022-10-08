@@ -1,0 +1,6 @@
+config BR2_PACKAGE_PYCUSTOM_AIOHTTP
+	bool "pycustom-aiohttp"
+	help
+	  Async http client/server framework (asyncio).
+
+	  https://github.com/aio-libs/aiohttp

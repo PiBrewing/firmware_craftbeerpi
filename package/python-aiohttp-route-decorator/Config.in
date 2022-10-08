@@ -1,6 +1,6 @@
 config BR2_PACKAGE_PYTHON_AIOHTTP_ROUTE_DECORATOR
 	bool "python-aiohttp-route-decorator"
-	select BR2_PACKAGE_PYTHON_AIOHTTP # runtime
+	select BR2_PACKAGE_PYCUSTOM_AIOHTTP # runtime
 	help
 	  aiohttp @route decorator that doesn't need the app
 	  singleton.

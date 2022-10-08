@@ -1,0 +1,7 @@
+config BR2_PACKAGE_PYCUSTOM_AIOHTTP_SECURITY
+	bool "pycustom-aiohttp-security"
+	select BR2_PACKAGE_PYCUSTOM_AIOHTTP # runtime
+	help
+	  security for aiohttp.web.
+
+	  https://github.com/aio-libs/aiohttp_security/
