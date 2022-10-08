@@ -1,7 +1,7 @@
 config BR2_PACKAGE_PYCUSTOM_AIOHTTP_SWAGGER
 	bool "pycustom-aiohttp-swagger"
 	select BR2_PACKAGE_PYCUSTOM_AIOHTTP # runtime
-	select BR2_PACKAGE_PYTHOM_JINJA2 # runtime
+	select BR2_PACKAGE_PYTHON_JINJA2 # runtime
 	select BR2_PACKAGE_PYTHON_PYYAML # runtime
 	help
 	  Swagger API Documentation builder for aiohttp server.
