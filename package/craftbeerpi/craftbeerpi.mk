@@ -18,6 +18,7 @@ CRAFTBEERPI_DEPENDENCIES = pycustom-requests pycustom-aiohttp \
 CRAFTBEERPI_STATE_DIR=/srv/craftbeerpi
 
 define CRAFTBEERPI_INSTALL_SETUP_FILES
+	mkdir -p $(TARGET_DIR)$(CRAFTBEERPI_STATE_DIR)
 	cp -r $(CRAFTBEERPI_PKGDIR)setup-data/* $(TARGET_DIR)$(CRAFTBEERPI_STATE_DIR)
 endef
 
