@@ -1,0 +1,6 @@
+config BR2_PACKAGE_CBPI4_PT100X
+	bool "cbpi4-pt100x"
+	help
+	  CraftBeerPi4 PT100/PT1000 Sensor Plugin.
+
+	  https://github.com/avollkopf/cbpi4-pt100x

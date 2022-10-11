@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/cbpi4-system/json
+md5  ee697614d367278769bce4826a8d23dc  cbpi4-system-0.0.7.tar.gz
+sha256  b855e47ab5559746354b4932dbe1f3dc27fba0b253bbe86b22a730b4a984356f  cbpi4-system-0.0.7.tar.gz
+# Locally computed sha256 checksums
+sha256  3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986  LICENSE
