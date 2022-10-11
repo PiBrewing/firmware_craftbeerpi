@@ -1,0 +1,21 @@
+Fix collections import for Mapping
+
+---
+ prompt_toolkit/styles/from_dict.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/prompt_toolkit/styles/from_dict.py b/prompt_toolkit/styles/from_dict.py
+index 2658cd04..2f473ab9 100644
+--- a/prompt_toolkit/styles/from_dict.py
++++ b/prompt_toolkit/styles/from_dict.py
+@@ -6,7 +6,7 @@ This is very similar to the Pygments style dictionary, with some additions:
+ - Support for ANSI color names. (These will map directly to the 16 terminal
+   colors.)
+ """
+-from collections import Mapping
++from collections.abc import Mapping
+
+ from .base import Style, DEFAULT_ATTRS, ANSI_COLOR_NAMES
+ from .defaults import DEFAULT_STYLE_EXTENSIONS
+--
+2.38.0
