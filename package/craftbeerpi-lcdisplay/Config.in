@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_LCDISPLAY
-    bool "craftbeerpi_lcdisplay"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Allows usage of LCD Display (I2C)

@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_ISPINDLE
-    bool "craftbeerpi_ispindle"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Sensor that collects data from the iSpindle

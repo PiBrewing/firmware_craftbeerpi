@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_PCF8574_GPIO
-    bool "craftbeerpi_pcf8574_gpio"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Extend PI's GPIO Actors by 8 via I2C device

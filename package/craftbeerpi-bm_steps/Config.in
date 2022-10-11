@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_BM_STEPS
-    bool "craftbeerpi_bm_steps"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Example Plugin for custom Mash steps

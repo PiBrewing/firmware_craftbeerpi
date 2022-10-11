@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_HTTP_ACTOR
-    bool "craftbeerpi_http_actor"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Generic Craftbeerpi4 HTTP Actor Plugin

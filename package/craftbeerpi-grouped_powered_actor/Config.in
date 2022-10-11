@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_GROUPED_POWERED_ACTOR
-    bool "craftbeerpi_grouped_powered_actor"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Allows to group Actors and ramp the power linear over the individual actors

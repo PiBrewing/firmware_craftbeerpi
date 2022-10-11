@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_LCDISPLAY2
-    bool "craftbeerpi_lcdisplay2"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Modded Fork that allows also Display of Fermentation with Fermenter Hysteresis Plugin

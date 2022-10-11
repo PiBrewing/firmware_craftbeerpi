@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_PID_HERMS
-    bool "craftbeerpi_pid_herms"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Kettle controller with PID logic, Boil power parameter and HLT temp sensor condition

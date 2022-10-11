@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_KETTLE_SENSOR
-    bool "craftbeerpi_kettle_sensor"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Collects targettemp and power/status for kettle / fermenter

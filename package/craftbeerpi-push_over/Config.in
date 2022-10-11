@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_PUSH_OVER
-    bool "craftbeerpi_push_over"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Forwards cbpi4 messages to Pushover push message service

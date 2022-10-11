@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_SCD30_CO2_SENSOR
-    bool "craftbeerpi_scd30_co2_sensor"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Temp, Rel. Humidity and CO2 sensor (I2C based)

@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_GROUPED_ACTOR
-    bool "craftbeerpi_grouped_actor"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Allows to group Actors

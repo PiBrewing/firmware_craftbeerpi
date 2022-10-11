@@ -1,5 +1,0 @@
-config BR2_PACKAGE_CRAFTBEERPI_FLOWMETER
-    bool "craftbeerpi_flowmeter"
-    depends on BR2_PACKAGE_CRAFTBEERPI
-    help
-    CraftBeerPi Plugin: Hall Sensor based Flowmeter Sensor
