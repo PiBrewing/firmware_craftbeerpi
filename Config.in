@@ -34,6 +34,7 @@ source "$BR2_EXTERNAL_CRAFTBEERPI_PATH/package/pycustom-aiohttp-security/Config.
 source "$BR2_EXTERNAL_CRAFTBEERPI_PATH/package/pycustom-aiohttp-session/Config.in"
 source "$BR2_EXTERNAL_CRAFTBEERPI_PATH/package/pycustom-aiohttp-swagger/Config.in"
 source "$BR2_EXTERNAL_CRAFTBEERPI_PATH/package/pycustom-aiojobs/Config.in"
+source "$BR2_EXTERNAL_CRAFTBEERPI_PATH/package/pycustom-async-timeout/Config.in"
 source "$BR2_EXTERNAL_CRAFTBEERPI_PATH/package/pycustom-click/Config.in"
 source "$BR2_EXTERNAL_CRAFTBEERPI_PATH/package/pycustom-cryptography/Config.in"
 source "$BR2_EXTERNAL_CRAFTBEERPI_PATH/package/pycustom-numpy/Config.in"
