@@ -15,6 +15,26 @@ CRAFTBEERPI_DEPENDENCIES = pycustom-requests pycustom-aiohttp \
 	python-coverage python-dateutil python-pytz python-ticket-auth python-setuptools \
 	craftbeerpi-ui
 
+CRAFTBEERPI_STATE_DIR=/srv/craftbeerpi
+
+define CRAFTBEERPI_INSTALL_SETUP_FILES
+	cp -r $(CRAFTBEERPI_PKGDIR)setup-data/* $(TARGET_DIR)$(CRAFTBEERPI_STATE_DIR)
+endef
+
+CRAFTBEERPI_POST_INSTALL_TARGET_HOOKS += CRAFTBEERPI_INSTALL_SETUP_FILES
+
+define CRAFTBEERPI_PERMISSIONS
+	$(CRAFTBEERPI_STATE_DIR) r 644 1000 1000 - - - - -
+	$(CRAFTBEERPI_STATE_DIR) d 744 1000 1000 - - - - -
+	$(CRAFTBEERPI_STATE_DIR)/logs d 744 1000 1000 - - - - -
+	$(CRAFTBEERPI_STATE_DIR)/logs/sensors d 744 1000 1000 - - - - -
+	$(CRAFTBEERPI_STATE_DIR)/config d 744 1000 1000 - - - - -
+	$(CRAFTBEERPI_STATE_DIR)/config/dashboard d 744 1000 1000 - - - - -
+	$(CRAFTBEERPI_STATE_DIR)/config/dashboard/widgets d 744 1000 1000 - - - - -
+	$(CRAFTBEERPI_STATE_DIR)/config/recipes d 744 1000 1000 - - - - -
+	$(CRAFTBEERPI_STATE_DIR)/config/upload d 744 1000 1000 - - - - -
+endef
+
 define CRAFTBEERPI_INSTALL_INIT_SYSTEMD
 	$(INSTALL) -D -m 644 -t $(TARGET_DIR)/usr/lib/systemd/system $(CRAFTBEERPI_PKGDIR)/craftbeerpi.service
 endef
