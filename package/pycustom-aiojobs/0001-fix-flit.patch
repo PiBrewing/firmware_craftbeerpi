@@ -1,0 +1,21 @@
+buildroot needs flit_core
+
+---
+ pyproject.toml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index d0ec963..7fa2dd6 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -1,6 +1,6 @@
+ [build-system]
+-requires = ["flit >= 1.1"]
+-build-backend = "flit.buildapi"
++requires = ["flit_core >= 1.1"]
++build-backend = "flit_core.buildapi"
+
+ [tool.flit.metadata]
+ module = "aiojobs"
+--
+2.38.0
