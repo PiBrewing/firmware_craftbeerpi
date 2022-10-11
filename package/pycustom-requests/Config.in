@@ -6,6 +6,8 @@ config BR2_PACKAGE_PYCUSTOM_REQUESTS
 	select BR2_PACKAGE_PYTHON_IDNA # runtime
 	select BR2_PACKAGE_PYTHON_IDNA # runtime
 	select BR2_PACKAGE_PYTHON_URLLIB3 # runtime
+
+	depends on !BR2_PACKAGE_PYTHON_REQUESTS
 	help
 	  Python HTTP for Humans.
 

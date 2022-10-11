@@ -1,0 +1,10 @@
+config BR2_PACKAGE_PYCUSTOM_ASYNC_TIMEOUT
+	bool "python-async-timeout"
+	select BR2_PACKAGE_PYCUSTOM_TYPING_EXTENSIONS # runtime
+
+	depends on !BR2_PACKAGE_PYTHON_ASYNC_TIMEOUT
+	
+	help
+	  asyncio-compatible timeout context manager.
+
+	  https://github.com/aio-libs/async-timeout

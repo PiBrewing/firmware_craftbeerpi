@@ -1,5 +1,7 @@
 config BR2_PACKAGE_PYCUSTOM_NUMPY
 	bool "pycustom-numpy"
+
+	depends on !BR2_PACKAGE_PYTHON_NUMPY
 	help
 	  NumPy is the fundamental package for array computing with
 	  Python.

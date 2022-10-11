@@ -1,6 +1,8 @@
 config BR2_PACKAGE_PYCUSTOM_AIOHTTP_SECURITY
 	bool "pycustom-aiohttp-security"
 	select BR2_PACKAGE_PYCUSTOM_AIOHTTP # runtime
+
+	depends on !BR2_PACKAGE_PYTHON_AIOHTTP_SECURITY
 	help
 	  security for aiohttp.web.
 

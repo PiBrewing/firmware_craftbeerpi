@@ -1,6 +1,9 @@
 config BR2_PACKAGE_PYCUSTOM_AIOJOBS
 	bool "pycustom-aiojobs"
-	select BR2_PACKAGE_PYTHON_ASYNC_TIMEOUT # runtime
+	select BR2_PACKAGE_PYCUSTOM_ASYNC_TIMEOUT # runtime
+	select BR2_PACKAGE_HOST_PYTHON_FLIT_CORE
+
+	depends on !BR2_PACKAGE_PYTHON_AIOJOBS
 	help
 	  Jobs scheduler for managing background task (asyncio).
 

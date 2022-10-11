@@ -1,6 +1,6 @@
 config BR2_PACKAGE_PYTHON_AIOSQLITE
 	bool "python-aiosqlite"
-	select BR2_PACKAGE_PYTHON_TYPING_EXTENSIONS # runtime
+	select BR2_PACKAGE_PYCUSTOM_TYPING_EXTENSIONS # runtime
 	help
 	  asyncio bridge to the standard sqlite3 module.
 

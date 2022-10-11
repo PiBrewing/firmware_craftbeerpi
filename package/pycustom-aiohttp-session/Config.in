@@ -1,7 +1,8 @@
 config BR2_PACKAGE_PYCUSTOM_AIOHTTP_SESSION
 	bool "pycustom-aiohttp-session"
 	select BR2_PACKAGE_PYCUSTOM_AIOHTTP # runtime
-	select BR2_PACKAGE_PYTHON_TYPING_EXTENSIONS # runtime
+	select BR2_PACKAGE_PYCUSTOM_TYPING_EXTENSIONS # runtime
+	depends on !BR2_PACKAGE_PYTHON_AIOHTTP_SESSION
 	help
 	  sessions for aiohttp.web.
 

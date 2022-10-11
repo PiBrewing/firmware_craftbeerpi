@@ -1,6 +1,8 @@
 config BR2_PACKAGE_PYCUSTOM_CRYPTOGRAPHY
 	bool "pycustom-cryptography"
 	select BR2_PACKAGE_PYTHON_SETUPTOOLS_RUST
+
+	depends on !BR2_PACKAGE_PYTHON_CRYPTOGRAPHY
 	help
 	  cryptography is a package which provides cryptographic
 	  recipes and primitives to Python developers.

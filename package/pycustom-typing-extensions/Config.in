@@ -1,3 +1,5 @@
 config BR2_PACKAGE_PYCUSTOM_TYPING_EXTENSIONS
+
+	depends on !BR2_PACKAGE_PYTHON_TYPING_EXTENSIONS
 	bool "pycustom-typing-extensions"
 	help
