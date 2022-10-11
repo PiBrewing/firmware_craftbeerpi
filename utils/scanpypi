@@ -146,10 +146,10 @@ class BuildrootPackage():
         name = re.sub(r'[^\w-]', '', pkg_name.lower())
         name = name.replace('_', '-')
         pattern = re.compile(r'^(?!' + self.prefix + ')(.+?)$')
-        # name = pattern.sub(r'prefix-\1', name)
-        # name = pattern.sub(prefix, name)
-        return self.prefix + "-" + name
-        # return name
+        name = pattern.sub(r''+self.prefix+'-\1', name)
+        name = pattern.sub(self.prefix, name)
+        #return self.prefix + "-" + name
+        return name
 
     def fetch_package_info(self):
         """
