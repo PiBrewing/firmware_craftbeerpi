@@ -1,7 +1,8 @@
 config BR2_PACKAGE_CBPI4_SYSTEM
 	bool "cbpi4-system"
 	select BR2_PACKAGE_PYCUSTOM_PSUTIL # runtime
-	select BR2_PACKAGE_PYTHON_GPIOZERO # runtime
+	select BR2_PACKAGE_PYCUSTOM_GPIOZERO # runtime
+
 	help
 	  CraftBeerPi4 Plugin for system fucntions.
 
