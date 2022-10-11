@@ -1,0 +1,9 @@
+config BR2_PACKAGE_PYCUSTOM_WCWIDTH
+	bool "pycustom-wcwidth"
+	
+	depends on !BR2_PACKAGE_PYTHON_WCWIDTH
+	help
+	  Measures the displayed width of unicode strings in a
+	  terminal.
+
+	  https://github.com/jquast/wcwidth

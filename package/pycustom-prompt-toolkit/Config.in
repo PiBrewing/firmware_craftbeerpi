@@ -1,0 +1,11 @@
+config BR2_PACKAGE_PYCUSTOM_PROMPT_TOOLKIT
+	bool "pycustom-prompt-toolkit"
+	select BR2_PACKAGE_PYTHON_SIX # runtime
+	select BR2_PACKAGE_PYCUSTOM_WCWIDTH # runtime
+
+	depends on !BR2_PACKAGE_PYTHON_PROMPT_TOOLKIT
+	help
+	  Library for building powerful interactive command lines in
+	  Python.
+
+	  https://github.com/jonathanslenders/python-prompt-toolkit
