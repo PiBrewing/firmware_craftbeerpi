@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/cbpi4-buzzer/json
+md5  f8f40a82abfaf7ccee6a832d4fe9424f  cbpi4-buzzer-0.0.3.tar.gz
+sha256  bdda2229913c2e7a5b65c916a3adc0ad1bcb8cb04e42c3e19bbe98fcc4f6024c  cbpi4-buzzer-0.0.3.tar.gz
+# Locally computed sha256 checksums
+sha256  605e9047a563c5c8396ffb18232aa4304ec56586aee537c45064c6fb425e44ad  LICENSE

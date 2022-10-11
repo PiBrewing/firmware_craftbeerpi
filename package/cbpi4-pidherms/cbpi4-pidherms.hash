@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/cbpi4-PIDHerms/json
+md5  f3f3fd08b9b7091a6a34d096736ea576  cbpi4-PIDHerms-0.0.4.tar.gz
+sha256  ce21b4f4c86d5ba6a5869988e0269b216dd06b901289ce3a4337fc916ad604a8  cbpi4-PIDHerms-0.0.4.tar.gz
+# Locally computed sha256 checksums
+sha256  3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986  LICENSE

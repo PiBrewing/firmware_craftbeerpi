@@ -1,0 +1,6 @@
+config BR2_PACKAGE_CBPI4_ISPINDLE
+	bool "cbpi4-ispindle"
+	help
+	  CraftBeerPi4 iSpindle Sensor Plugin.
+
+	  https://github.com/avollkopf/cbpi4-iSpindle

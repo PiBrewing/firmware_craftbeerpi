@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/cbpi4-iSpindle/json
+md5  a698ba92fb944232c8244823e36b6f14  cbpi4-iSpindle-0.0.10.tar.gz
+sha256  1326849e98fbeebeacba8974fcaf998df5dcf7c7ce599f62e774ba7f7c90c90c  cbpi4-iSpindle-0.0.10.tar.gz
+# Locally computed sha256 checksums
+sha256  3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986  LICENSE

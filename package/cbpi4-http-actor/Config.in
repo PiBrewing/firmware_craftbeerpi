@@ -1,0 +1,7 @@
+config BR2_PACKAGE_CBPI4_HTTP_ACTOR
+	bool "cbpi4-http-actor"
+	select BR2_PACKAGE_CRAFTBEERPI # runtime
+	help
+	  Generic CraftBeerPi HTTP Actor Plugin.
+
+	  https://github.com/hurra/cbpi4-http-actor

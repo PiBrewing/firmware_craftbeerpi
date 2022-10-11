@@ -1,0 +1,6 @@
+config BR2_PACKAGE_CBPI4_BUZZER
+	bool "cbpi4-buzzer"
+	help
+	  CraftBeerPi4 Buzzer Plugin.
+
+	  https://github.com/avollkopf/cbpi4-buzzer

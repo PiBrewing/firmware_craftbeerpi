@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/cbpi4-GroupedPowerActor/json
+md5  517c432eaddc1f4de070cb55d5257c87  cbpi4-GroupedPowerActor-0.0.6.tar.gz
+sha256  d1958ae5452f2664b46f6e14c6b05dc2dabaf254a0dca1f7bbddf0552fe0a09d  cbpi4-GroupedPowerActor-0.0.6.tar.gz
+# Locally computed sha256 checksums
+sha256  3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986  LICENSE

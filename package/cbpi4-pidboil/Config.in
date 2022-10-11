@@ -1,0 +1,6 @@
+config BR2_PACKAGE_CBPI4_PIDBOIL
+	bool "cbpi4-pidboil"
+	help
+	  CraftBeerPi4 PID Kettle Control Plugin.
+
+	  https://github.com/avollkopf/cbpi4-PIDBoil

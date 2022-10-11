@@ -1,0 +1,7 @@
+config BR2_PACKAGE_CBPI4_KETTLESENSOR
+	bool "cbpi4-kettlesensor"
+	help
+	  CraftBeerPi4 Plugin to add Sensor parameters for your
+	  Kettle and Fermenter.
+
+	  https://github.com/avollkopf/cbpi4-KettleSensor

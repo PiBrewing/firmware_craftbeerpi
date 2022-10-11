@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/cbpi4-http-actor/json
+md5  37c2393700898abb42fd6c6c7aa160fd  cbpi4-http-actor-0.0.4.tar.gz
+sha256  f61347ddcd33608107abeaf53156fa10de9bcfd54b7cbb36f4840302618e1fe0  cbpi4-http-actor-0.0.4.tar.gz
+# Locally computed sha256 checksums
+sha256  3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986  LICENSE

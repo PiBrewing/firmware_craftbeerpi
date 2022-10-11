@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/cbpi4-PIDBoil/json
+md5  0e7d26f2b922cdae6a090e960787adea  cbpi4-PIDBoil-0.0.7.tar.gz
+sha256  19fdfea768d7989e68289e5817002f1d7c25611766b940e0db8f8b3256e43054  cbpi4-PIDBoil-0.0.7.tar.gz
+# Locally computed sha256 checksums
+sha256  3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986  LICENSE

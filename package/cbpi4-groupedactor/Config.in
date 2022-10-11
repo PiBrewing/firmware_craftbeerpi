@@ -1,0 +1,6 @@
+config BR2_PACKAGE_CBPI4_GROUPEDACTOR
+	bool "cbpi4-groupedactor"
+	help
+	  CraftBeerPi Plugin.
+
+	  https://github.com/avollkopf/cbpi4-GroupedActor
