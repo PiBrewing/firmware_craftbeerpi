@@ -1,0 +1,31 @@
+Removed parameter unsupported by Python 3.10
+
+---
+ cbpi/job/_scheduler.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/cbpi/job/_scheduler.py b/cbpi/job/_scheduler.py
+index 28db254..48a111a 100644
+--- a/cbpi/job/_scheduler.py
++++ b/cbpi/job/_scheduler.py
+@@ -21,9 +21,9 @@ class Scheduler(*bases):
+         self._close_timeout = close_timeout
+         self._limit = limit
+         self._exception_handler = exception_handler
+-        self._failed_tasks = asyncio.Queue(loop=loop)
++        self._failed_tasks = asyncio.Queue()
+         self._failed_task = loop.create_task(self._wait_failed())
+-        self._pending = asyncio.Queue(maxsize=pending_limit, loop=loop)
++        self._pending = asyncio.Queue(maxsize=pending_limit)
+         self._closed = False
+
+     def __iter__(self):
+@@ -152,4 +152,4 @@ class Scheduler(*bases):
+                 # self.call_exception_handler() is already called
+                 # by Job._add_done_callback
+                 # Thus we caught an task exception and we are good citizens
+-                pass
+\ No newline at end of file
++                pass
+--
+2.38.0
