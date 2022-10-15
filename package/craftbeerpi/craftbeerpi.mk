@@ -15,7 +15,7 @@ CRAFTBEERPI_DEPENDENCIES = pycustom-requests pycustom-aiohttp \
 	python-coverage python-dateutil python-pytz python-ticket-auth python-setuptools \
 	craftbeerpi-ui
 
-CRAFTBEERPI_STATE_DIR=/srv/craftbeerpi
+CRAFTBEERPI_STATE_DIR=/opt/craftbeerpi
 
 define CRAFTBEERPI_INSTALL_SETUP_FILES
 	mkdir -p $(TARGET_DIR)$(CRAFTBEERPI_STATE_DIR)
