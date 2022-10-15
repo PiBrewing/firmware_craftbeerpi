@@ -41,7 +41,7 @@ define CRAFTBEERPI_INSTALL_INIT_SYSTEMD
 endef
 
 define CRAFTBEERPI_USERS
-	craftbeerpi 1000 craftbeerpi 1000 * /srv/craftbeerpi - dialout
+	craftbeerpi 1000 craftbeerpi 1000 * /srv/craftbeerpi - dialout,gpio,i2c,spi,input
 endef
 
 $(eval $(python-package))
