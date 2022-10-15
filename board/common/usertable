@@ -1,0 +1,5 @@
+# username  uid group   gid password    home    shell   groups  comment
+-           -1  input   -1  -           -       -       -
+-           -1  i2c     -1  -           -       -       -
+-           -1  spi     -1  -           -       -       -
+-           -1  gpio   -1  -           -       -       -
