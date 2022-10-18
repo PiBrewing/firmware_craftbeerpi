@@ -11,7 +11,7 @@ the RaspberryPi 3B is supported, but adding other RaspberryPi versions is fairly
 - [x] Support for I2C based actors/sensors
 - [x] Support for GPIO based actors/sensors
 - [x] CraftBeerPi running under Python 3.10
-- [ ] CraftBeerPi state and config and USB flash drive
+- [x] CraftBeerPi state and config and USB flash drive
 - [ ] Running Wifi AP on the Raspberry Pi
 - [ ] Integrated MQTT broker
 - [ ] Easy [rauc](https://rauc.io/) based updates via USB or OTA
