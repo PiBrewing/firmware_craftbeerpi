@@ -11,16 +11,16 @@ the RaspberryPi 3B is supported, but adding other RaspberryPi versions is fairly
 - [x] Support for I2C based actors/sensors
 - [x] Support for GPIO based actors/sensors
 - [x] CraftBeerPi running under Python 3.10
-- [x] CraftBeerPi state and config and USB flash drive
+- [x] CraftBeerPi state and config on USB flash drive
 - [ ] Running Wifi AP on the Raspberry Pi
 - [ ] Integrated MQTT broker
 - [ ] Easy [rauc](https://rauc.io/) based updates via USB or OTA
 
-## Installation
+## Usage
 
-Simply flash the provided image on a suitable SD-Card (1 GB or larger),
-i.e. via `dd if=<path/to/image> of=/dev/<sdcard> bs=1m status=progress`
-and insert it into your RaspberryPi.
+* Flash the provided image to your sd card (i.e. via `dd if=<path/to/image> of=/dev/<sdcard> bs=1m status=progress`)
+* Insert 1 (exactly one, not more) exFAT formatted USB drive into one of the USB ports of the Raspberry Pi
+* Boot the Raspberry Pi
 
 ## Build
 
