@@ -61,5 +61,5 @@ jobs:
       
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: "buildroot/output/images/${BUILD_NAME}.img"
+          artifacts: "buildroot/output/images/${{ env.BUILD_NAME }}.img"
           prerelease: true
