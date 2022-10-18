@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
 
     env:
-      BUILD_NAME: '${{ matrix.config }}-${{ github.sha }}'
+      BUILD_NAME: '${{ matrix.config }}-${{ github.ref_name }}'
       CONFIG_NAME: '${{ matrix.config }}_defconfig'
     steps:
       - name: free space on runner
