@@ -32,3 +32,14 @@ and insert it into your RaspberryPi.
 * Run `make`
 * Under `output/images` you will find the file `sdcard.img` containing a flashable image
   for the Raspberry Pi 3B
+
+### Docker
+
+This repo provides a Dockerfile to provide an easy to use build environment.
+
+* Build with `docker build -t <name-and-tag> .`
+* Run with `docker run -ti --rm -v $PWD/:/home/br-user/external:rw <name-and-tag>`
+* Change into `/home/br-user/buildroot`
+* In the provided shell execute `make BR2_EXTERNAL=../external/ craftbeerpi_rpi3_defconfig` and `make`
+* After the build finishes you can copy `output/images/sdcard.img` to `/home/br-user/external/sdcard.img`
+  and flash it as usual
