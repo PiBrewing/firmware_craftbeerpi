@@ -58,13 +58,6 @@ jobs:
       - name: rename sd card image
         run: |
           mv buildroot/output/images/sdcard.img buildroot/output/images/${BUILD_NAME}.img
-
-      - name: upload sdcard image
-        uses: actions/upload-artifact@v3
-        with:
-          name: '${{ matrix.config }}-sdcard.img'
-          path: buildroot/output/images/sdcard.img
-          if-no-files-found: error
       
       - uses: ncipollo/release-action@v1
         with:
