@@ -2,10 +2,8 @@ name: image
 
 on:
   push:
-    branches:
-      - main
-    tags-ignore:
-      - '**'
+    tags:
+    - "v*"
 
 env:
   BUILDROOT_VERSION: '2022.05.1'
@@ -57,9 +55,9 @@ jobs:
           make -s all
         working-directory: 'buildroot'
 
-      - name: List output directory
+      - name: rename sd card image
         run: |
-          ls buildroot/output/images
+          mv buildroot/output/images/sdcard.img buildroot/output/images/${BUILD_NAME}.img
 
       - name: upload sdcard image
         uses: actions/upload-artifact@v3
@@ -67,3 +65,8 @@ jobs:
           name: '${{ matrix.config }}-sdcard.img'
           path: buildroot/output/images/sdcard.img
           if-no-files-found: error
+      
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "buildroot/output/images/${BUILD_NAME}.img"
+          prerelease: true
