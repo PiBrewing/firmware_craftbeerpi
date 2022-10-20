@@ -19,6 +19,14 @@ define CRAFTBEERPI_INSTALL_INIT_SYSTEMD
 	$(INSTALL) -D -m 644 -t $(TARGET_DIR)/usr/lib/systemd/system $(CRAFTBEERPI_PKGDIR)/craftbeerpi.service
 endef
 
+define CRAFTBEERPI_INSTALL_AVAHI_SERVICE
+	$(INSTALL) -D -m 644 -t $(TARGET_DIR)/etc/avahi/services/ $(CRAFTBEERPI_PKGDIR)/cbpi.service
+endef
+
+ifeq ($(BR2_PACKAGE_AVAHI_DAEMON),y)
+CRAFTBEERPI_POST_INSTALL_TARGET_HOOKS += CRAFTBEERPI_INSTALL_AVAHI_SERVICE
+endif
+
 define CRAFTBEERPI_USERS
 	craftbeerpi 1000 craftbeerpi 1000 * /srv/craftbeerpi - dialout,gpio,i2c,spi,input
 endef
