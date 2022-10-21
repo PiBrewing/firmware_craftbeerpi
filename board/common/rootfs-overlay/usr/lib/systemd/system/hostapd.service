@@ -1,0 +1,14 @@
+[Unit]
+Description = Accesspoint for CraftBeerPi
+Wants=network.target
+Before=network.target
+BindsTo=sys-subsystem-net-devices-wlan0.device
+After=sys-subsystem-net-devices-wlan0.device
+ConditionPathExists=/etc/hostapd/ap.conf
+
+[Service]
+Type=Simple
+ExecStart=/usr/sbin/hostapd /etc/hostapd/ap.conf
+
+[Install]
+WantedBy=multi-user.target

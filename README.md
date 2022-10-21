@@ -13,7 +13,7 @@ the RaspberryPi 3B is supported, but adding other RaspberryPi versions is fairly
 - [x] CraftBeerPi running under Python 3.10
 - [x] CraftBeerPi state and config on USB flash drive
 - [x] Announce CraftBeerPi service via mDNS 
-- [ ] Running Wifi AP on the Raspberry Pi
+- [x] Running Wifi AP on the Raspberry Pi
 - [ ] Integrated MQTT broker
 - [ ] Easy [rauc](https://rauc.io/) based updates via USB or OTA
 

@@ -1,0 +1,13 @@
+[Match]
+Type=ether
+
+[Network]
+EmitLLDP=yes
+LinkLocalAddressing=ipv6
+DHCP=yes
+IPv6AcceptRA=yes
+IPv6PrivacyExtensions=no
+
+[DHCP]
+ClientIdentifier=mac
+RouteMetric=100
