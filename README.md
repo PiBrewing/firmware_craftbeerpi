@@ -17,6 +17,11 @@ the RaspberryPi 3B is supported, but adding other RaspberryPi versions is fairly
 - [ ] Integrated MQTT broker
 - [ ] Easy [rauc](https://rauc.io/) based updates via USB or OTA
 
+## Supported Platforms
+
+- [x] Raspberry Pi 3B+
+- [?] Raspberry Pi 4B
+
 ## Usage
 
 * Flash the provided image to your sd card (i.e. via `dd if=<path/to/image> of=/dev/<sdcard> bs=1m status=progress`)
