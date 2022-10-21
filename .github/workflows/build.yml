@@ -17,6 +17,7 @@ jobs:
       matrix:
         config:
           - 'craftbeerpi_rpi3'
+          - 'craftbeerpi_rpi4'
       fail-fast: false
 
     env:
