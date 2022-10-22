@@ -15,4 +15,6 @@ RUN git clone https://github.com/buildroot/buildroot.git && \
     cd buildroot && \
     git checkout $BR_VERSION
 
+WORKDIR /home/br-user/buildroot
+
 ENTRYPOINT ["/bin/bash"]
