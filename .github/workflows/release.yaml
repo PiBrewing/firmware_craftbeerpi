@@ -64,3 +64,4 @@ jobs:
         with:
           artifacts: "buildroot/output/images/${{ env.BUILD_NAME }}.img"
           prerelease: true
+          allowUpdates: true
