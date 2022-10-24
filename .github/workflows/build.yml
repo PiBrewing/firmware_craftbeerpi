@@ -27,10 +27,12 @@ jobs:
       - name: free space on runner
         run: |
           sudo rm -rf /usr/share/swift /usr/share/dotnet
+
       - name: install dependencies
         run: |
           sudo apt-get update
           sudo apt-get -y install bc
+
       - name: checkout Buildroot
         uses: actions/checkout@v2
         with:
@@ -48,6 +50,13 @@ jobs:
           make -s BR2_EXTERNAL=$GITHUB_WORKSPACE/external $CONFIG_NAME
         working-directory: 'buildroot'
 
+      - name: Cache Downloads
+        id: cache-downloads
+        uses: actions/cache@v3
+        with:
+          path: buildroot/dl
+          key: ${{ env.BUILDROOT_VERSION }}-primes
+
       - name: download source
         run: |
           make -s source
@@ -57,10 +66,6 @@ jobs:
         run: |
           make -s all
         working-directory: 'buildroot'
-
-      - name: List output directory
-        run: |
-          ls buildroot/output/images
 
       - name: upload sdcard image
         uses: actions/upload-artifact@v3
