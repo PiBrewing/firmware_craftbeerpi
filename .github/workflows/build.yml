@@ -55,7 +55,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: buildroot/dl
-          key: ${{ env.BUILDROOT_VERSION }}-primes
+          key: ${{ env.BUILDROOT_VERSION }}-buildroot-dl
 
       - name: download source
         run: |
