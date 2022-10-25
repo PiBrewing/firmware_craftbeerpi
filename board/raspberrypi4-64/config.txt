@@ -1,5 +1,5 @@
-start_file=start.elf
-fixup_file=fixup.dat
+start_file=start4.elf
+fixup_file=fixup4.dat
 
 kernel=Image
 disable_overscan=1
