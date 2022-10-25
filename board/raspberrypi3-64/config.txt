@@ -1,6 +1,8 @@
 start_file=start.elf
 fixup_file=fixup.dat
 
+boot_delay=0
+
 kernel=Image
 disable_overscan=1
 
@@ -22,3 +24,4 @@ arm_64bit=1
 dtparam=spi=on
 dtparam=i2c_arm=on
 dtparam=i2c1=on
+dtparam=watchdog=on

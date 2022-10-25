@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+case "$1" in
+	"get-primary")
+		grep 'os_prefix=' /boot/config.txt | tail -n 1 | sed -nr 's/os_prefix=(.+)\//\1 /pg' | xargs
+		exit 0
+		;;
+	"set-primary")
+		mount -o remount,rw /boot
+		echo -e "os_prefix=$2/\n$(</boot/config-common.txt)" > /boot/config.txt
+		mount -o remount,ro /boot
+		exit 0
+		;;
+	"get-state")
+		echo good
+		exit 0
+		;;
+	"set-state")
+		exit 0
+		;;
+esac

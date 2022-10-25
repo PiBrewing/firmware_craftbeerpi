@@ -14,3 +14,7 @@ ID=craftbeerpi
 ID_LIKE=buildroot
 PRETTY_NAME="craftbeerpi (Buildroot ${BR2_VERSION})"
 EOF
+
+if [ -n "${GITHUB_SHA:-}" ]; then
+    echo "VERSION_ID=${GITHUB_SHA}" >> ${TARGET_DIR}/etc/os-release 
+fi
