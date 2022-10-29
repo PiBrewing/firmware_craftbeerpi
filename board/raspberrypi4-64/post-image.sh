@@ -10,6 +10,8 @@ GENIMAGE_CFG="${BOARD_DIR}/genimage.cfg"
 GENIMAGE_TMP="${BUILD_DIR}/genimage.tmp"
 
 install -D -m 0644 "${BOARD_DIR}/config.txt" "${BINARIES_DIR}/config.txt"
+cp "${BOARD_DIR}/fixup*.dat" "{$BINARIES_DIR}"
+cp "${BOARD_DIR}/start*.elf" "{$BINARIES_DIR}"
 
 # Pass an empty rootpath. genimage makes a full copy of the given rootpath to
 # ${GENIMAGE_TMP}/root so passing TARGET_DIR would be a waste of time and disk
