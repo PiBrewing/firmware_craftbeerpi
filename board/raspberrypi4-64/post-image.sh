@@ -10,8 +10,14 @@ GENIMAGE_CFG="${BOARD_DIR}/genimage.cfg"
 GENIMAGE_TMP="${BUILD_DIR}/genimage.tmp"
 
 install -D -m 0644 "${BOARD_DIR}/config.txt" "${BINARIES_DIR}/config.txt"
-cp "${BOARD_DIR}/fixup*.dat" "{$BINARIES_DIR}"
-cp "${BOARD_DIR}/start*.elf" "{$BINARIES_DIR}"
+install -D -m 0644 "${BOARD_DIR}/fixup4.dat" "${BINARIES_DIR}/fixup4.dat"
+install -D -m 0644 "${BOARD_DIR}/fixup4cd.dat" "${BINARIES_DIR}/fixup4cd.dat"
+install -D -m 0644 "${BOARD_DIR}/fixup4db.dat" "${BINARIES_DIR}/fixup4db.dat"
+install -D -m 0644 "${BOARD_DIR}/fixup4x.dat" "${BINARIES_DIR}/fixup4x.dat"
+install -D -m 0644 "${BOARD_DIR}/start4.elf" "${BINARIES_DIR}/start4.elf"
+install -D -m 0644 "${BOARD_DIR}/start4cd.elf" "${BINARIES_DIR}/start4cd.elf"
+install -D -m 0644 "${BOARD_DIR}/start4db.elf" "${BINARIES_DIR}/start4db.elf"
+install -D -m 0644 "${BOARD_DIR}/start4x.elf" "${BINARIES_DIR}/start4x.elf"
 
 # Pass an empty rootpath. genimage makes a full copy of the given rootpath to
 # ${GENIMAGE_TMP}/root so passing TARGET_DIR would be a waste of time and disk
