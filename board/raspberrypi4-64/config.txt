@@ -1,26 +1,19 @@
-start_x=0
-
 kernel=Image
 disable_overscan=1
 
-# How much memory in MB to assign to the GPU on Pi models having
-# 256, 512 or 1024 MB total memory
-gpu_mem_256=16
-gpu_mem_512=16
-gpu_mem_1024=16
+gpu_mem=16
 
 # fixes rpi (3B, 3B+, 3A+, 4B and Zero W) ttyAMA0 serial console
 dtoverlay=miniuart-bt
 
 # enable autoprobing of Bluetooth driver without need of hciattach/btattach
-dtoverlay=krnbt=on
-
+dtoverlay=miniuart-bt
 dtoverlay=vc4-kms-v3d-pi4
-dtoverlay=imx219
 
 # enable 64bits support
 arm_64bit=1
 
+dtparam=krnbt=on
 dtparam=spi=on
 dtparam=i2c_arm=on
 dtparam=i2c1=on
