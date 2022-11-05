@@ -1,4 +1,4 @@
 /dev/mmcblk0p1 /boot vfat ro,noatime,fmask=0177,dmask=0077,flush 0 1
 tmpfs /var tmpfs nodev,nosuid,mode=0755 0 0
 tmpfs /root tmpfs nodev,nosuid,mode=0700 0 0
-/dev/sda1 /srv/craftbeerpi exfat rw,relatime,iocharset=utf8,noexec,fmask=0117,dmask=0007,uid=1000,gid=1000
+/dev/sda1 /srv/craftbeerpi auto rw,relatime,iocharset=utf8,noexec,fmask=0117,dmask=0007,uid=1000,gid=1000
