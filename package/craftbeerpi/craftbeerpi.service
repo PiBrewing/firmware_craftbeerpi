@@ -7,7 +7,7 @@ After=network.target
 Restart=always
 User=craftbeerpi
 Environment="HOME=/srv/craftbeerpi"
-ExecStartPre="[ -d "/srv/craftbeerpi/config" ] || /bin/cbpi setup"
+ExecStartPre="/usr/local/sbin/cbpi-prestart.sh"
 ExecStart=/bin/cbpi start
 WorkingDirectory=/srv/craftbeerpi
 AmbientCapabilities=CAP_NET_BIND_SERVICE
