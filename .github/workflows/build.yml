@@ -50,6 +50,19 @@ jobs:
           make -s BR2_EXTERNAL=$GITHUB_WORKSPACE/external $CONFIG_NAME
         working-directory: 'buildroot'
 
+      - name: Enable CCACHE
+        run: |
+          echo "BR2_CCACHE=y" >> .config
+          echo 'BR2_CCACHE_DIR="$(HOME)/.buildroot-ccache"' >> .config
+          echo 'BR2_CCACHE_USE_BASEDIR=y' >> .config
+
+      - name: Cache CCACHE
+        id: cache-ccache
+        uses: actions/cache@v3
+        with:
+          path: $(HOME)/.buildroot-ccache
+          key: ${{ env.BUILDROOT_VERSION }}-buildroot-ccache
+
       - name: Cache Downloads
         id: cache-downloads
         uses: actions/cache@v3
