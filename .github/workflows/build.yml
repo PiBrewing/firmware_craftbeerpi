@@ -53,14 +53,14 @@ jobs:
       - name: Enable CCACHE
         run: |
           echo "BR2_CCACHE=y" >> .config
-          echo 'BR2_CCACHE_DIR="$(HOME)/.buildroot-ccache"' >> .config
+          echo 'BR2_CCACHE_DIR="$(GITHUB_WORKSPACE)/.buildroot-ccache"' >> .config
           echo 'BR2_CCACHE_USE_BASEDIR=y' >> .config
 
       - name: Cache CCACHE
         id: cache-ccache
         uses: actions/cache@v3
         with:
-          path: ${{ env.HOME }}/.buildroot-ccache
+          path: ${{ env.GITHUB_WORKSPACE }}/.buildroot-ccache
           key: ${{ env.BUILDROOT_VERSION }}-buildroot-ccache
 
       - name: Cache Downloads
