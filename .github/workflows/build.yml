@@ -55,6 +55,7 @@ jobs:
           echo "BR2_CCACHE=y" >> .config
           echo 'BR2_CCACHE_DIR="$(GITHUB_WORKSPACE)/.buildroot-ccache"' >> .config
           echo 'BR2_CCACHE_USE_BASEDIR=y' >> .config
+          echo 'BR2_CCACHE_INITIAL_SETUP=""' >> .config
 
       - name: Cache CCACHE
         id: cache-ccache
