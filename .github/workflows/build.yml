@@ -61,8 +61,8 @@ jobs:
         id: cache-ccache
         uses: actions/cache@v3
         with:
-          path: ${{ env.GITHUB_WORKSPACE }}/.buildroot-ccache
-          key: ${{ env.BUILDROOT_VERSION }}-buildroot-ccache
+          path: .buildroot-ccache
+          key: ${{ env.BUILDROOT_VERSION }}-${{ matrix.config }}-buildroot-ccache
 
       - name: Cache Downloads
         id: cache-downloads
