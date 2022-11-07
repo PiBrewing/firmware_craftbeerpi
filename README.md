@@ -20,7 +20,7 @@ the RaspberryPi 3B is supported, but adding other RaspberryPi versions is fairly
 ## Supported Platforms
 
 - [x] Raspberry Pi 3B+
-- [ ] Raspberry Pi 4B (needs testing)
+- [x] Raspberry Pi 4B
 
 ## Usage
 
