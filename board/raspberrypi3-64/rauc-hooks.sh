@@ -13,7 +13,7 @@ case "$1" in
 		mount -o remount,rw "${RPI_BOOT}"
 		rm -rf "${RPI_BOOT}/${RAUC_SLOT_BOOTNAME}"
 		mkdir "${RPI_BOOT}/${RAUC_SLOT_BOOTNAME}"
-		cp "${RAUC_BUNDLE_MOUNT_POINT}/kernel7l.img" \
+		cp "${RAUC_BUNDLE_MOUNT_POINT}/kernel8.img" \
 			"${RAUC_BUNDLE_MOUNT_POINT}/bcm2710-rpi-3-b.dtb" \
 			"${RAUC_BUNDLE_MOUNT_POINT}/bcm2710-rpi-3-b-plus.dtb" \
 			"${RAUC_BUNDLE_MOUNT_POINT}/bcm2837-rpi-3-b.dtb" \

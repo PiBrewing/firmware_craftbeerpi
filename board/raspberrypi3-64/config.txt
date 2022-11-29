@@ -3,7 +3,7 @@ fixup_file=fixup.dat
 
 boot_delay=0
 
-kernel=Image
+# kernel=Image
 disable_overscan=1
 
 # How much memory in MB to assign to the GPU on Pi models having
@@ -25,3 +25,5 @@ dtparam=spi=on
 dtparam=i2c_arm=on
 dtparam=i2c1=on
 dtparam=watchdog=on
+
+enable_uart=1
