@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 set -e
 
 BOARD_DIR="$(dirname $0)"
