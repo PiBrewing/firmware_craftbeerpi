@@ -44,6 +44,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: 'external'
+          submodules: 'recursive'
 
       - name: configure image
         run: |
