@@ -1,0 +1,10 @@
+[Unit]
+Description=ssh %I host key
+ConditionPathExists=!/var/lib/ssh/ssh_host_%I_key
+After=rngd.service
+Before=sshd.service
+
+[Service]
+Type=oneshot
+StateDirectory=ssh
+ExecStart=/usr/bin/ssh-keygen -t %I -f /var/lib/ssh/ssh_host_%I_key
