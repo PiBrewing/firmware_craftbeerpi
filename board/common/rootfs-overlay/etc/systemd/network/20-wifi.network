@@ -11,4 +11,6 @@ IPv6PrivacyExtensions=no
 [DHCPServer]
 PoolOffset=10
 PoolSize=200
-EmitDNS=no
+BindToInterface=yes
+EmitDNS=yes
+DNS=_server_address

@@ -1,0 +1,14 @@
+[Unit]
+Description=DHCP and DNS caching server for wlan0.
+After=network.target hostapd.service
+BindsTo=sys-subsystem-net-devices-wlan0.device
+After=sys-subsystem-net-devices-wlan0.device
+
+[Service]
+ExecStart=/usr/sbin/dnsmasq -k --conf-file=/etc/dnsmasq/wlan0.conf
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
