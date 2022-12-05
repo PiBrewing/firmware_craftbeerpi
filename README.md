@@ -2,7 +2,7 @@
 
 This project provides a [buildroot](https://buildroot.org) based firmware to run
 [CraftBeerPi](https://github.com/craftbeerpi/craftbeerpi4) on embedded systems. Currently
-the RaspberryPi 3B is supported, but adding other RaspberryPi versions is fairly easy.
+the RaspberryPi 3B/4B is supported, but adding other RaspberryPi versions is fairly easy.
 
 ## Motivation and intended use
 
@@ -30,6 +30,9 @@ Also in the future, basic configuration can be done via the existence and conten
 - [x] Running Wifi AP on the Raspberry Pi
 - [ ] Integrated MQTT broker
 - [ ] Easy [rauc](https://rauc.io/) based updates via USB or OTA
+  - [x] Updates via USB
+  - [ ] Updates via network
+  - [ ] Proper setup of signing keys etc.
 
 ## Supported Platforms
 
@@ -41,6 +44,10 @@ Also in the future, basic configuration can be done via the existence and conten
 * Flash the provided image to your sd card (i.e. via `dd if=<path/to/image> of=/dev/<sdcard> bs=1m status=progress`)
 * Insert 1 (exactly one, not more) exFAT formatted USB drive into one of the USB ports of the Raspberry Pi
 * Boot the Raspberry Pi
+
+## Update
+
+To update via USB place the update file as `cbpifw-update.bin` in the top folder of the USB drive and boot the Raspberry Pi.
 
 ### Enabling the WiFi AP
 
