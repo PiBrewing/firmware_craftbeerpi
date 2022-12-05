@@ -4,11 +4,11 @@ Wants=network.target
 Before=network.target
 BindsTo=sys-subsystem-net-devices-wlan0.device
 After=sys-subsystem-net-devices-wlan0.device
-ConditionPathExists=/etc/hostapd/ap.conf
+ConditionPathExists=/srv/craftbeerpi/ap.conf
 
 [Service]
 Type=simple
-ExecStart=/usr/sbin/hostapd /etc/hostapd/ap.conf
+ExecStart=/usr/sbin/hostapd /srv/craftbeerpi/ap.conf
 
 [Install]
 WantedBy=multi-user.target
