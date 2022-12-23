@@ -23,6 +23,7 @@ jobs:
     env:
       BUILD_NAME: '${{ matrix.config }}-${{ github.sha }}'
       CONFIG_NAME: '${{ matrix.config }}_defconfig'
+      CBPIFW_DEV_BUILD: 'true'
     steps:
       - name: free space on runner
         run: |

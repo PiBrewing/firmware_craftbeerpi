@@ -11,16 +11,13 @@ install -D -m 0644 "${BOARD_DIR}/config.txt" "${BINARIES_DIR}/config-common.txt"
 install -D -m 0644 "${BOARD_DIR}/cmdline.txt" "${BINARIES_DIR}/cmdline.txt"
 install -D -m 0755 "${BOARD_DIR}/rauc-hooks.sh" "${BINARIES_DIR}/rauc-hooks.sh"
 
-[[ -f "${BINARIES_DIR}/cbpifw.cert.pem" ]] || openssl req -x509 -newkey rsa:4096 -nodes -keyout "${BINARIES_DIR}/cbpifw.key.pem" -out "${BINARIES_DIR}/cbpifw.cert.pem" -subj "/O=cbpifw/CN=cbpifw-update"
-
-rm -f "${BINARIES_DIR}/overlays.tar"
-tar -C "${BINARIES_DIR}/rpi-firmware/overlays" -c -f "${BINARIES_DIR}/overlays.tar" .
-
-rm -rf "${BINARIES_DIR}/image0"
-mkdir -p "${BINARIES_DIR}/image0"
-cp -r -t "${BINARIES_DIR}/image0" "${BINARIES_DIR}/rpi-firmware/overlays"
-echo -e "root=/dev/mmcblk0p2 $(<${BINARIES_DIR}/cmdline.txt)" > "${BINARIES_DIR}/image0/cmdline.txt"
-echo -e "os_prefix=image0/\n$(<${BINARIES_DIR}/config-common.txt)" > "${BINARIES_DIR}/config.txt"
+if [[ "${CBPIFW_DEV_BUILD}" == "true" ]]; then
+	export RAUC_SIGNING_KEY_PATH="${BINARIES_DIR}/cbpifw-dev.key.pem"
+	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-dev.cert.pem"
+else 
+	export RAUC_SIGNING_KEY_PATH="TBD"
+	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-update.pem"
+fi
 
 RAUC_MANIFEST=$(cat <<EOM
 [update]
