@@ -14,5 +14,6 @@ arm_64bit=1
 dtparam=spi=on
 dtparam=i2c_arm=on
 dtparam=i2c1=on
+dtoverlay=i2c-rtc,ds3231
 dtparam=watchdog=on
 enable_uart=1
