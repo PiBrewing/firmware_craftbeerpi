@@ -15,6 +15,6 @@ dtparam=spi=on
 dtparam=i2c_arm=on
 dtparam=i2c1=on
 dtoverlay=i2c-rtc,ds3231
-dtoverlay=w1-gpio,gpiopin=x
+dtoverlay=w1-gpio,gpiopin=4
 dtparam=watchdog=on
 enable_uart=1
