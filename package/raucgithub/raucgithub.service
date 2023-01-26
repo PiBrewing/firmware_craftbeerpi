@@ -1,0 +1,12 @@
+[Unit]
+Description=RAUCGithub - Update manager for rauc
+Documentation=https://github.com/dereulenspiegel/rauc-github
+After=network.target
+
+[Service]
+Restart=always
+User=raucgithub
+ExecStart=/usr/bin/raucgithub
+
+[Install]
+WantedBy=multi-user.target

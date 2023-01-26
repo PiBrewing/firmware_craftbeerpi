@@ -1,0 +1,6 @@
+config BR2_PACKAGE_RAUCGITHUB
+	bool "raucgithub"
+	help
+	  Simple tool to check github for new firmware updates
+
+	  https://github.com/dereulenspiegel/rauc-github
