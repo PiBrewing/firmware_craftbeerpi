@@ -14,14 +14,14 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        config:
-          - 'craftbeerpi_rpi3'
-          - 'craftbeerpi_rpi4'
+        board:
+          - 'raspberrypi3-64'
+          - 'raspberrypi4-64'
       fail-fast: false
 
     env:
-      BUILD_NAME: '${{ matrix.config }}-${{ github.ref_name }}'
-      CONFIG_NAME: '${{ matrix.config }}_defconfig'
+      BUILD_NAME: 'cbpifw-${{ matrix.board }}_${{ github.ref_name }}'
+      CONFIG_NAME: 'cbpifw_${{ matrix.board }}_defconfig'
     steps:
       - name: free space on runner
         run: |
