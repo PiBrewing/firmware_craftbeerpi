@@ -17,7 +17,7 @@ if [[ "${CBPIFW_DEV_BUILD}" == "true" ]]; then
 	export RAUC_SIGNING_KEY_PATH="${BINARIES_DIR}/cbpifw-dev.key.pem"
 	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-dev.cert.pem"
 else 
-	export RAUC_SIGNING_KEY_PATH="TBD"
+	export RAUC_SIGNING_KEY_PATH="${BINARIES_DIR}/cbpifw-update.key"
 	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-update.pem"
 fi
 
