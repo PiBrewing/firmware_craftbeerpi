@@ -67,6 +67,13 @@ jobs:
           make -s all
         working-directory: 'buildroot'
 
+      - name: Destroy keys again
+        run: |
+          rm -f buildroot/output/images/*.key
+          rm -f buildroot/output/images/*.pem
+          rm -f buildroot/output/images/*.crt
+          rm -f buildroot/output/images/*.cert
+
       - name: rename sd card image
         run: |
           mv buildroot/output/images/sdcard.img buildroot/output/images/${BUILD_NAME}.img
