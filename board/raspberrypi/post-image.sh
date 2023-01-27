@@ -27,10 +27,11 @@ cp -r -t "${BINARIES_DIR}/image0" "${BINARIES_DIR}/rpi-firmware/overlays"
 echo -e "root=/dev/mmcblk0p2 $(<${BINARIES_DIR}/cmdline.txt)" > "${BINARIES_DIR}/image0/cmdline.txt"
 echo -e "os_prefix=image0/\n$(<${BINARIES_DIR}/config-common.txt)" > "${BINARIES_DIR}/config.txt"
 
+$VERSION=${IMAGE_VERSION:-snapshot}
 RAUC_MANIFEST=$(cat <<EOM
 [update]
 compatible=cbpifw-${BOARD_NAME}
-version=${GITHUB_SHA:-snapshot}
+version=${VERSION}
 build=${GITHUB_SHA:-snapshot}
 [bundle]
 format=verity
