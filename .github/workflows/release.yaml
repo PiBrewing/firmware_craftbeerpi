@@ -73,6 +73,6 @@ jobs:
       
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: "buildroot/output/images/${{ env.BUILD_NAME }}.img"
+          artifacts: "buildroot/output/images/${{ env.BUILD_NAME }}.img, buildroot/output/images/cbpifw-${{ matrix.board }}_update.bin"
           prerelease: true
           allowUpdates: true
