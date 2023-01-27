@@ -58,9 +58,9 @@ jobs:
           RELEASE_SIGNING_KEY_B64: ${{ secrets.RELEASE_SIGNING_KEY_B64 }}
           RELEASE_SIGNING_CERT_B64: ${{ secrets.RELEASE_SIGNING_CERT_B64 }}
         run: |
-          mkdir -p output/images/
-          echo $RELEASE_SIGNING_KEY_B64 | base64 -d > output/images/cbpifw-update.key
-          echo $RELEASE_SIGNING_CERT_B64 | base64 -d > output/images/cbpifw-update.pem
+          mkdir -p buildroot/output/images/
+          echo $RELEASE_SIGNING_KEY_B64 | base64 -d > buildroot/output/images/cbpifw-update.key
+          echo $RELEASE_SIGNING_CERT_B64 | base64 -d > buildroot/output/images/cbpifw-update.pem
 
       - name: build image
         run: |
