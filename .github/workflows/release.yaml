@@ -22,6 +22,7 @@ jobs:
     env:
       BUILD_NAME: 'cbpifw-${{ matrix.board }}_${{ github.ref_name }}'
       CONFIG_NAME: 'cbpifw_${{ matrix.board }}_defconfig'
+      UPDATE_BUNDLE: cbpifw-${{ matrix.board }}_update.bin
     steps:
       - name: free space on runner
         run: |
@@ -74,12 +75,13 @@ jobs:
           rm -f buildroot/output/images/*.crt
           rm -f buildroot/output/images/*.cert
 
-      - name: rename sd card image
+      - name: rename sd card image and update bundle
         run: |
           mv buildroot/output/images/sdcard.img buildroot/output/images/${BUILD_NAME}.img
+          mv buildroot/output/images/${UPDATE_BUNDLE} buildroot/output/images/${BUILD_NAME}_update.bin"
       
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: "buildroot/output/images/${{ env.BUILD_NAME }}.img, buildroot/output/images/cbpifw-${{ matrix.board }}_update.bin"
+          artifacts: "buildroot/output/images/${{ env.BUILD_NAME }}.img, buildroot/output/images/${{ env.BUILD_NAME }}_update.bin"
           prerelease: true
           allowUpdates: true
