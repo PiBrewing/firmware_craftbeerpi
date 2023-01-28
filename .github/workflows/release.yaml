@@ -12,6 +12,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-20.04
+    environment: ${{ vars.RELEASE_ENV }}
     strategy:
       matrix:
         board:
@@ -59,6 +60,8 @@ jobs:
           RELEASE_SIGNING_KEY_B64: ${{ secrets.RELEASE_SIGNING_KEY_B64 }}
           RELEASE_SIGNING_CERT_B64: ${{ secrets.RELEASE_SIGNING_CERT_B64 }}
         run: |
+          [ -z "$RELEASE_SIGNING_KEY_B64" ] && echo "Signing key is missing" && exit 1
+          [ -z "$RELEASE_SIGNING_CERT_B64" ] && echo "Signing cert is missing" && exit 1
           mkdir -p buildroot/output/images/
           echo $RELEASE_SIGNING_KEY_B64 | base64 -d > buildroot/output/images/cbpifw-update.key
           echo $RELEASE_SIGNING_CERT_B64 | base64 -d > buildroot/output/images/cbpifw-update.pem
