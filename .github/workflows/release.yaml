@@ -54,17 +54,15 @@ jobs:
         env:
           RELEASE_SIGNING_KEY_B64: ${{ secrets.RELEASE_SIGNING_KEY_B64 }}
           RELEASE_SIGNING_CERT_B64: ${{ secrets.RELEASE_SIGNING_CERT_B64 }}
-          RELEASE_SIGNING_CA_CERT: ${{ secrets.RELEASE_SIGNING_CA_CERT }}
         run: |
           openssl version
           [ -z "$RELEASE_SIGNING_KEY_B64" ] && echo "Signing key is missing" && exit 1
           [ -z "$RELEASE_SIGNING_CERT_B64" ] && echo "Signing cert is missing" && exit 1
-          [ -z "$RELEASE_SIGNING_CA_CERT" ] && echo "Signing CA cert is missing" && exit 1
           mkdir -p buildroot/output/images/
           echo $RELEASE_SIGNING_KEY_B64 | base64 -d > buildroot/output/images/cbpifw-update.key
           echo $RELEASE_SIGNING_CERT_B64 | base64 -d > buildroot/output/images/cbpifw-update.pem
           echo $RELEASE_SIGNING_CA_CERT | base64 -d > buildroot/output/images/cbpifw-ca.pem
-          openssl verify -verbose -CAfile buildroot/output/images/cbpifw-ca.pem buildroot/output/images/cbpifw-update.pem
+          openssl verify -verbose -CAfile external/.cert-staging/ca.crt buildroot/output/images/cbpifw-update.pem
           SIGNING_KEY_PUB=$(openssl pkey -in buildroot/output/images/cbpifw-update.key -pubout)
           SIGNING_CERT_PUB=$(openssl x509 -in buildroot/output/images/cbpifw-update.pem -pubkey -noout)
           [ "$SIGNING_KEY_PUB" != "$SIGNING_CERT_PUB" ] && echo "Signing key does not match signing cert" && exit 1      
