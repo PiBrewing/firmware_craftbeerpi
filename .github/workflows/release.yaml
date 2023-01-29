@@ -50,11 +50,6 @@ jobs:
           make -s BR2_EXTERNAL=$GITHUB_WORKSPACE/external $CONFIG_NAME
         working-directory: 'buildroot'
 
-      - name: download source
-        run: |
-          make -s source
-        working-directory: 'buildroot'
-
       - shell: bash
         env:
           RELEASE_SIGNING_KEY_B64: ${{ secrets.RELEASE_SIGNING_KEY_B64 }}
@@ -68,9 +63,15 @@ jobs:
           echo $RELEASE_SIGNING_KEY_B64 | base64 -d > buildroot/output/images/cbpifw-update.key
           echo $RELEASE_SIGNING_CERT_B64 | base64 -d > buildroot/output/images/cbpifw-update.pem
           echo $RELEASE_SIGNING_CA_CERT | base64 -d > buildroot/output/images/cbpifw-ca.pem
-          cat buildroot/output/images/cbpifw-update.pem
-          openssl x509 -in buildroot/output/images/cbpifw-update.pem -text
+          openssl verify -verbose -CAfile buildroot/output/images/cbpifw-ca.pem buildroot/output/images/cbpifw-update.pem
+          SIGNING_KEY_PUB=$(openssl pkey -in buildroot/output/images/cbpifw-update.key -pubout)
+          SIGNING_CERT_PUB=$(openssl x509 -in buildroot/output/images/cbpifw-update.pem -pubkey -noout)
+          [ "$SIGNING_KEY_PUB" != "$SIGNING_CERT_PUB" ] && echo "Signing key does not match signing cert" && exit 1      
 
+      - name: download source
+        run: |
+          make -s source
+        working-directory: 'buildroot'
 
       - name: build image
         run: |
