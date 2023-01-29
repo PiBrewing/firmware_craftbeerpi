@@ -65,6 +65,9 @@ jobs:
           mkdir -p buildroot/output/images/
           echo $RELEASE_SIGNING_KEY_B64 | base64 -d > buildroot/output/images/cbpifw-update.key
           echo $RELEASE_SIGNING_CERT_B64 | base64 -d > buildroot/output/images/cbpifw-update.pem
+          cat buildroot/output/images/cbpifw-update.pem
+          openssl x509 -in buildroot/output/images/cbpifw-update.pem -text
+
 
       - name: build image
         run: |
