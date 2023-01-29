@@ -1,0 +1,51 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: ED25519
+        Issuer: C=DE, ST=NRW, L=Dortmund, O=CBPi, OU=CBPiFW, CN=CBPiFW-CA/emailAddress=till.klocke@gmail.com
+        Validity
+            Not Before: Jan 29 12:37:24 2023 GMT
+            Not After : Jan 26 12:37:24 2033 GMT
+        Subject: C=DE, ST=NRW, L=Dortmund, O=CBPi, OU=CBPiFW, CN=CBPiFW-Releases 1
+        Subject Public Key Info:
+            Public Key Algorithm: ED25519
+                ED25519 Public-Key:
+                pub:
+                    a6:1b:42:c5:18:d7:71:cd:18:5b:9a:1e:dc:d7:89:
+                    c5:45:e4:67:da:99:18:a3:25:55:b4:6c:68:f2:fa:
+                    9d:01
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                E6:71:6F:E5:51:D5:5F:9F:AE:81:2A:29:C8:6B:A9:E1:D0:AF:F9:E4
+            X509v3 Authority Key Identifier: 
+                66:17:11:14:37:FE:78:07:DE:3A:D7:14:98:54:AA:15:9E:31:E2:18
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+            X509v3 Extended Key Usage: critical
+                Code Signing
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+    Signature Algorithm: ED25519
+    Signature Value:
+        cf:a0:6a:ca:34:79:b5:f9:42:02:0d:2a:14:32:7e:11:b9:a0:
+        cf:a7:82:dd:98:d8:52:86:da:83:65:79:c8:0b:af:22:f5:74:
+        5e:4f:2c:66:b5:bb:54:03:39:3b:b9:2d:a0:ba:74:2b:f5:cc:
+        0b:bb:aa:50:50:52:23:f2:8b:02
+-----BEGIN CERTIFICATE-----
+MIICRDCCAfagAwIBAgIBATAFBgMrZXAwgYgxCzAJBgNVBAYTAkRFMQwwCgYDVQQI
+DANOUlcxETAPBgNVBAcMCERvcnRtdW5kMQ0wCwYDVQQKDARDQlBpMQ8wDQYDVQQL
+DAZDQlBpRlcxEjAQBgNVBAMMCUNCUGlGVy1DQTEkMCIGCSqGSIb3DQEJARYVdGls
+bC5rbG9ja2VAZ21haWwuY29tMB4XDTIzMDEyOTEyMzcyNFoXDTMzMDEyNjEyMzcy
+NFowajELMAkGA1UEBhMCREUxDDAKBgNVBAgMA05SVzERMA8GA1UEBwwIRG9ydG11
+bmQxDTALBgNVBAoMBENCUGkxDzANBgNVBAsMBkNCUGlGVzEaMBgGA1UEAwwRQ0JQ
+aUZXLVJlbGVhc2VzIDEwKjAFBgMrZXADIQCmG0LFGNdxzRhbmh7c14nFReRn2pkY
+oyVVtGxo8vqdAaOBoTCBnjAdBgNVHQ4EFgQU5nFv5VHVX5+ugSopyGup4dCv+eQw
+HwYDVR0jBBgwFoAUZhcRFDf+eAfeOtcUmFSqFZ4x4hgwCQYDVR0TBAIwADALBgNV
+HQ8EBAMCBaAwFgYDVR0lAQH/BAwwCgYIKwYBBQUHAwMwLAYJYIZIAYb4QgENBB8W
+HU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRlMAUGAytlcANBAM+gaso0ebX5
+QgINKhQyfhG5oM+ngt2Y2FKG2oNlecgLryL1dF5PLGa1u1QDOTu5LaC6dCv1zAu7
+qlBQUiPyiwI=
+-----END CERTIFICATE-----
