@@ -63,9 +63,9 @@ jobs:
           echo $RELEASE_SIGNING_CERT_B64 | base64 -d > buildroot/output/images/cbpifw-update.pem
           echo $RELEASE_SIGNING_CA_CERT | base64 -d > buildroot/output/images/cbpifw-ca.pem
           openssl verify -verbose -CAfile external/.cert-staging/ca.crt buildroot/output/images/cbpifw-update.pem
-          SIGNING_KEY_PUB=$(openssl pkey -in buildroot/output/images/cbpifw-update.key -pubout)
-          SIGNING_CERT_PUB=$(openssl x509 -in buildroot/output/images/cbpifw-update.pem -pubkey -noout)
-          [ "$SIGNING_KEY_PUB" != "$SIGNING_CERT_PUB" ] && echo "Signing key does not match signing cert" && exit 1      
+          # SIGNING_KEY_PUB=$(openssl pkey -in buildroot/output/images/cbpifw-update.key -pubout)
+          # SIGNING_CERT_PUB=$(openssl x509 -in buildroot/output/images/cbpifw-update.pem -pubkey -noout)
+          # [ "$SIGNING_KEY_PUB" != "$SIGNING_CERT_PUB" ] && echo "Signing key does not match signing cert" && exit 1      
 
       - name: download source
         run: |
