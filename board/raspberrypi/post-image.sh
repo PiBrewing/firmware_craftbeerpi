@@ -18,7 +18,8 @@ if [[ "${CBPIFW_DEV_BUILD}" == "true" ]]; then
 	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-dev.cert.pem"
 else 
 	export RAUC_SIGNING_KEY_PATH="${BINARIES_DIR}/cbpifw-update.key"
-	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-update.pem"
+	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-ca.pem"
+	export RAUC_INTERMEDIAT_KEY_PATH="${BINARIES_DIR}/cbpifw-update.pem"
 fi
 
 rm -rf "${BINARIES_DIR}/image0"
