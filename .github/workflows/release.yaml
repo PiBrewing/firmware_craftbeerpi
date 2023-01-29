@@ -56,6 +56,7 @@ jobs:
           RELEASE_SIGNING_CERT_B64: ${{ secrets.RELEASE_SIGNING_CERT_B64 }}
           RELEASE_SIGNING_CA_CERT: ${{ secrets.RELEASE_SIGNING_CA_CERT }}
         run: |
+          openssl version
           [ -z "$RELEASE_SIGNING_KEY_B64" ] && echo "Signing key is missing" && exit 1
           [ -z "$RELEASE_SIGNING_CERT_B64" ] && echo "Signing cert is missing" && exit 1
           [ -z "$RELEASE_SIGNING_CA_CERT" ] && echo "Signing CA cert is missing" && exit 1
