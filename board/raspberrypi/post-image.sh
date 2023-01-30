@@ -14,9 +14,11 @@ install -D -m 0755 "${BOARD_DIR}/rauc-hooks-${BOARD_NAME}.sh" "${BINARIES_DIR}/r
 [[ -f ${BOARD_DIR}/post-image-${BOARD_NAME}.sh ]] && ${BOARD_DIR}/post-image-${BOARD_NAME}.sh
 
 if [[ "${CBPIFW_DEV_BUILD}" == "true" ]]; then
+	echo "Using dev keys for image signing"
 	export RAUC_SIGNING_KEY_PATH="${BINARIES_DIR}/cbpifw-dev.key.pem"
 	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-dev.cert.pem"
 else 
+	echo "Using release keys for image signing"
 	export RAUC_SIGNING_KEY_PATH="${BINARIES_DIR}/cbpifw-update.key"
 	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-update.pem"
 fi
