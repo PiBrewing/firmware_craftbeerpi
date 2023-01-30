@@ -51,6 +51,7 @@ jobs:
         working-directory: 'buildroot'
 
       - shell: bash
+        name: Ensuring signing keys and certs are valid
         env:
           RELEASE_SIGNING_KEY_B64: ${{ secrets.RELEASE_SIGNING_KEY_B64 }}
           RELEASE_SIGNING_CERT_B64: ${{ secrets.RELEASE_SIGNING_CERT_B64 }}
@@ -64,7 +65,8 @@ jobs:
           openssl verify -verbose -CAfile external/.cert-staging/ca.crt buildroot/output/images/cbpifw-update.pem
           SIGNING_KEY_PUB=$(openssl pkey -in buildroot/output/images/cbpifw-update.key -pubout | openssl md5)
           SIGNING_CERT_PUB=$(openssl x509 -in buildroot/output/images/cbpifw-update.pem -pubkey -noout | openssl md5)
-          [[ "$SIGNING_KEY_PUB" != "$SIGNING_CERT_PUB" ]] && echo "Signing key does not match signing cert" && exit 2      
+          echo "Checking if private key matches certificate: $SIGNING_KEY_PUB == $SIGNING_CERT_PUB"
+          [ "$SIGNING_KEY_PUB" != "$SIGNING_CERT_PUB" ] && echo "Signing key does not match signing cert" && exit 2      
 
       - name: download source
         run: |
