@@ -23,6 +23,14 @@ else
 	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-update.pem"
 fi
 
+SIGNING_KEY_HASH=$(openssl pkey -in ${RAUC_SIGNING_KEY_PATH} -pubout | openssl md5)
+SIGNING_CERT_HASH=$(openssl x509 -in ${RAUC_SIGNING_CERT_PATH} -pubkey -noout | openssl md5)
+
+if [[ "$SIGNING_KEY_HASH" != "$SIGNING_CERT_HASH" ]]; then
+	echo "Certificate (${SIGNING_CERT_HASH}) and key (${SIGNING_KEY_HASH}) do not belong together and won't be able to sign the update bundle"
+	exit 10
+fi
+
 rm -rf "${BINARIES_DIR}/image0"
 mkdir -p "${BINARIES_DIR}/image0"
 cp -r -t "${BINARIES_DIR}/image0" "${BINARIES_DIR}/rpi-firmware/overlays"
