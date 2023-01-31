@@ -90,7 +90,7 @@ jobs:
       - name: rename sd card image and update bundle
         run: |
           mv buildroot/output/images/sdcard.img buildroot/output/images/${BUILD_NAME}.img
-          mv buildroot/output/images/${UPDATE_BUNDLE} buildroot/output/images/${BUILD_NAME}_update.bin"
+          mv buildroot/output/images/${UPDATE_BUNDLE} buildroot/output/images/${BUILD_NAME}_update.bin
       
       - uses: ncipollo/release-action@v1
         with:
