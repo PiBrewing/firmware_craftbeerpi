@@ -19,8 +19,8 @@ if [[ "${CBPIFW_DEV_BUILD}" == "true" ]]; then
 	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-dev.cert.pem"
 else 
 	echo "Using release keys for image signing"
-	export RAUC_SIGNING_KEY_PATH="${BINARIES_DIR}/cbpifw-update.key"
-	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-update.pem"
+	export RAUC_SIGNING_KEY_PATH="${BINARIES_DIR}/cbpifw-signing.key"
+	export RAUC_SIGNING_CERT_PATH="${BINARIES_DIR}/cbpifw-signing.pem"
 fi
 
 SIGNING_KEY_HASH=$(openssl pkey -in ${RAUC_SIGNING_KEY_PATH} -pubout | openssl md5)
