@@ -18,3 +18,5 @@ dtoverlay=i2c-rtc,ds3231
 dtoverlay=w1-gpio,gpiopin=4
 dtparam=watchdog=on
 enable_uart=1
+
+gpio=25,7,8,12,16,20,21=op,dh
