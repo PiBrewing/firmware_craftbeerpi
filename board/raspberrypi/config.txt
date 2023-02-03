@@ -20,3 +20,5 @@ dtparam=watchdog=on
 enable_uart=1
 
 gpio=25,7,8,12,16,20,21=op,dh
+
+dtoverlay=spi0-0cs
