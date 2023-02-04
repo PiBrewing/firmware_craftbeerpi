@@ -34,6 +34,9 @@ if [[ "$SIGNING_KEY_HASH" != "$SIGNING_CERT_HASH" ]]; then
 	exit 10
 fi
 
+echo "Building custom device tree overlays"
+dtc -O dtb -o ${BINARIES_DIR}/rpi-firmware/overlays/spi0-0cs.dtbo ${BOARD_DIR}/overlays/spi0-0cs.dts
+
 rm -rf "${BINARIES_DIR}/image0"
 mkdir -p "${BINARIES_DIR}/image0"
 cp -r -t "${BINARIES_DIR}/image0" "${BINARIES_DIR}/rpi-firmware/overlays"
