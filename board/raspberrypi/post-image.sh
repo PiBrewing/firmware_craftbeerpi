@@ -11,7 +11,10 @@ install -D -m 0644 "${BOARD_DIR}/config.txt" "${BINARIES_DIR}/config-common.txt"
 install -D -m 0644 "${BOARD_DIR}/cmdline.txt" "${BINARIES_DIR}/cmdline.txt"
 install -D -m 0755 "${BOARD_DIR}/rauc-hooks-${BOARD_NAME}.sh" "${BINARIES_DIR}/rauc-hooks.sh"
 
-[[ -f ${BOARD_DIR}/post-image-${BOARD_NAME}.sh ]] && ${BOARD_DIR}/post-image-${BOARD_NAME}.sh
+if [[ -f ${BOARD_DIR}/post-image-${BOARD_NAME}.sh ]]; then
+	echo "Executing board specific post image script for board ${BOARD_NAME}"
+	${BOARD_DIR}/post-image-${BOARD_NAME}.sh
+fi
 
 if [[ "${CBPIFW_DEV_BUILD}" == "true" ]]; then
 	echo "Using dev keys for image signing"
