@@ -5,6 +5,7 @@ Before=network.target
 BindsTo=sys-subsystem-net-devices-wlan0.device
 After=sys-subsystem-net-devices-wlan0.device
 ConditionPathExists=/srv/craftbeerpi/ap.conf
+ConditionPathExists=!/srv/craftbeerpi/wifi.conf
 
 [Service]
 Type=simple
